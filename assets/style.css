@@ -61,6 +61,7 @@ p { margin: 0; }
 nav { display: flex; gap: 1.6rem; margin-inline: auto; font-size: 0.93rem; }
 nav a { text-decoration: none; color: var(--muted); white-space: nowrap; }
 nav a:hover { color: var(--ink); }
+nav a[aria-current="page"] { color: var(--accent-ink); font-weight: 600; }
 .actions { display: flex; gap: 0.4rem; }
 .pill {
   display: inline-flex; align-items: center; justify-content: center;
