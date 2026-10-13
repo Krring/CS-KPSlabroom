@@ -34,13 +34,13 @@
   },
   "email": "chatsuda.sak@ku.th",
   "phone": "",
-  "bookingUrl": "https://calendar.app.google/ใส่ลิงก์หน้าจองนัดจาก-Google-Calendar",
+  "bookingUrl": "https://calendar.app.google/2hZmiAe6EXVwUfJU6",
   "membersPortalUrl": "https://sites.google.com/ใส่ลิงก์-Google-Sites-คลังความรู้",
   "joinText": {
     "th": "เรารับนิสิตปริญญาโทและปริญญาเอกที่สนใจจุลชีววิทยาของพืช ชีวสารสนเทศ หรือการควบคุมโรคพืชโดยชีววิธี ส่งอีเมลแนะนำตัว ประวัติย่อ และหัวข้อที่สนใจมาได้",
     "en": "We welcome master's and doctoral students interested in plant microbiology, bioinformatics, or biological control. Email a short introduction, your CV, and the topics you would like to work on."
   },
-  "bookingEmbedUrl": "",
+  "bookingEmbedUrl": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3Xv-wK_hWkcar0k9NhAjsN35-9U5_BQa59NBMX4zrHVizAlKt9oh4iM_9oTM-JwNiDW2CWJtCQ?gv=true",
   "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%9E%E0%B8%B7%E0%B8%8A+%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%81%E0%B8%AA%E0%B8%99",
   "contactFormEndpoint": "https://script.google.com/macros/s/AKfycbwD4-KfloI_7kVvbsK2H1h9kW-rMedKnqYogFzCYWqP0bXt2nUOS3335HoCitLLpFrW/exec"
 }
