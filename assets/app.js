@@ -9,7 +9,7 @@
       "nav.portal": "สำหรับสมาชิกแล็บ",
       "hero.join": "สนใจเข้าร่วมแล็บ", "hero.research": "ดูงานวิจัยของเรา",
       "research.lead": "ห้าแนวทางที่แล็บทำอยู่ ตั้งแต่ระดับยีนไปจนถึงในแปลงปลูก",
-      "pubs.note": "รายการเต็มดูได้ที่",
+      "pubs.note": "รายการเต็มดูได้ที่", "pubs.all": "ดูผลงานทั้งหมด {n} เรื่อง", "pubs.count": "แสดง {n} จาก {total} เรื่อง", "pubs.n": "{n} เรื่อง", "pubs.none": "ไม่มีผลงานในช่วงปีที่เลือก", "pubs.from": "ตั้งแต่ปี", "pubs.to": "ถึงปี", "pubs.allYears": "ทุกปี", "pubs.last3": "3 ปีล่าสุด", "pubs.last5": "5 ปีล่าสุด", "pubs.back": "กลับหน้าแรก", "pubs.lead": "ผลงานตีพิมพ์ทั้งหมด เรียงจากใหม่ไปเก่า ชื่อของอาจารย์เป็นตัวหนา",
       "svc.note": "ติดต่อสอบถามรายละเอียด ระยะเวลา และค่าบริการก่อนส่งตัวอย่าง",
       "svc.sample": "ตัวอย่างที่ส่ง",
       "contact.address": "ที่อยู่", "contact.email": "อีเมล",
@@ -29,7 +29,7 @@
       "nav.portal": "Lab members",
       "hero.join": "Join the lab", "hero.research": "See our research",
       "research.lead": "Five lines of work, from genes in a genome to plants in the field",
-      "pubs.note": "Full list on",
+      "pubs.note": "Full list on", "pubs.all": "See all {n} publications", "pubs.count": "Showing {n} of {total}", "pubs.n": "{n} papers", "pubs.none": "No publications in the selected years", "pubs.from": "From", "pubs.to": "To", "pubs.allYears": "All years", "pubs.last3": "Last 3 years", "pubs.last5": "Last 5 years", "pubs.back": "Back to home", "pubs.lead": "All publications, newest first. The PI's name is in bold.",
       "svc.note": "Please ask about scope, turnaround, and fees before sending samples",
       "svc.sample": "Send",
       "contact.address": "Address", "contact.email": "Email",
@@ -53,6 +53,7 @@
     '<path d="M30 14A12 12 0 0 0 9 12M9 12V6M9 12h6M10 26a12 12 0 0 0 21 2M31 28v6M31 28h-6"/>'
   ];
 
+  var HOME = !!document.getElementById("research-list");
   var lang = "th";
   try { lang = localStorage.getItem("lab-lang") || "th"; } catch (e) {}
   var data = null;
@@ -116,13 +117,15 @@
       el.textContent = binds[el.getAttribute("data-bind")] || "";
     });
     var lines = s.heroLines && s.heroLines[lang];
-    if (lines && lines.length) {
+    if (lines && lines.length && $(".hero h1")) {
       $(".hero h1").innerHTML = lines.map(function (l) { return '<span class="nb">' + esc(l) + "</span>"; }).join(lang === "th" ? "<wbr>" : " ");
     }
     [["#portal-link", s.membersPortalUrl], ["#booking-link", s.bookingUrl]].forEach(function (p) {
-      $(p[0]).href = isPlaceholder(p[1]) ? "#contact" : p[1];
+      var el = $(p[0]); if (!el) return;
+      el.href = isPlaceholder(p[1]) ? (HOME ? "#contact" : "index.html#contact") : p[1];
     });
 
+    if (!HOME) { renderFull(); return; }
     $("#research-list").innerHTML = data.research.map(function (r, i) {
       return '<article class="tile"><svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
         GLYPHS[i % GLYPHS.length] + "</svg><h3>" + esc(t(r.title)) + "</h3><p>" + rich(t(r.body)) + "</p></article>";
@@ -155,13 +158,14 @@
     }
     $("#member-list").innerHTML = html;
 
-    var pubs = data.publications.slice().sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
-    $("#pub-list").innerHTML = pubs.length ? pubs.map(function (p) {
-      var where = "<i>" + esc(p.journal) + "</i>" + (p.volume ? " " + esc(p.volume) : "") + (p.pages ? ": " + esc(p.pages) : "");
-      var doi = p.doi ? ' <a href="https://doi.org/' + esc(p.doi) + '" target="_blank" rel="noopener">doi:' + esc(p.doi) + "</a>" : "";
-      return '<li class="pub"><span class="yr">' + esc(p.year) + '</span><div><div class="t">' + rich(p.title) + badge(p) +
-        '</div><div class="meta">' + (p.authors ? esc(p.authors) + ". " : "") + where + "." + doi + "</div></div></li>";
-    }).join("") : '<li class="pub"><span></span><div>' + ui.empty + "</div></li>";
+    var pubs = sortedPubs();
+    var LIMIT = 10;
+    $("#pub-list").innerHTML = pubs.length ? pubs.slice(0, LIMIT).map(pubItem).join("") : '<li class="pub"><span></span><div>' + ui.empty + "</div></li>";
+    var more = $("#pub-more");
+    if (more) {
+      more.hidden = pubs.length <= LIMIT;
+      more.textContent = ui["pubs.all"].replace("{n}", pubs.length);
+    }
 
     $("#service-list").innerHTML = data.services.map(function (v) {
       return '<article class="svc"><h3>' + esc(t(v.title)) + badge(v) + "</h3><p>" + esc(t(v.body)) + "</p>" +
@@ -178,13 +182,75 @@
     }).join("") : "<p>" + ui.empty + "</p>";
   }
 
+  var ME = /\b(Sakdapetsiri C|Chirapanda C)\b/g;
+  function sortedPubs() {
+    return data.publications.slice().sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
+  }
+  function pubItem(p) {
+    var where = "<i>" + esc(p.journal) + "</i>" + (p.volume ? " " + esc(p.volume) : "") + (p.pages ? ": " + esc(p.pages) : "");
+    var doi = p.doi ? ' <a href="https://doi.org/' + esc(p.doi) + '" target="_blank" rel="noopener">doi:' + esc(p.doi) + "</a>" : "";
+    var authors = p.authors ? esc(p.authors).replace(ME, "<b>$1</b>") + ". " : "";
+    return '<li class="pub"><span class="yr">' + esc(p.year) + '</span><div><div class="t">' + rich(p.title) + badge(p) +
+      '</div><div class="meta">' + authors + where + "." + doi + "</div></div></li>";
+  }
+
+  var range = null;
+  function renderFull() {
+    var ui = UI[lang], pubs = sortedPubs();
+    var years = pubs.map(function (p) { return p.year; }).filter(function (y) { return typeof y === "number"; });
+    var lo = Math.min.apply(null, years), hi = Math.max.apply(null, years);
+    if (!range) range = { from: lo, to: hi };
+    var opts = [];
+    for (var y = hi; y >= lo; y--) opts.push(y);
+    var fromSel = $("#yr-from"), toSel = $("#yr-to");
+    fromSel.innerHTML = opts.slice().reverse().map(function (y) { return "<option" + (y === range.from ? " selected" : "") + ">" + y + "</option>"; }).join("");
+    toSel.innerHTML = opts.map(function (y) { return "<option" + (y === range.to ? " selected" : "") + ">" + y + "</option>"; }).join("");
+    document.querySelectorAll("[data-quick]").forEach(function (b) {
+      var n = +b.getAttribute("data-quick");
+      var on = n ? (range.from === hi - n + 1 && range.to === hi) : (range.from === lo && range.to === hi);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    var shown = pubs.filter(function (p) { return p.year >= range.from && p.year <= range.to; });
+    $("#pub-count").textContent = ui["pubs.count"].replace("{n}", shown.length).replace("{total}", pubs.length);
+    var groups = [], last = null;
+    shown.forEach(function (p) {
+      if (p.year !== last) { groups.push({ year: p.year, items: [] }); last = p.year; }
+      groups[groups.length - 1].items.push(p);
+    });
+    $("#pub-full").innerHTML = groups.length ? groups.map(function (g) {
+      return '<section class="yr-group"><h3>' + esc(g.year) + ' <span>' + ui["pubs.n"].replace("{n}", g.items.length) + '</span></h3><ol class="pubs">' +
+        g.items.map(pubItem).join("") + "</ol></section>";
+    }).join("") : '<p class="empty">' + ui["pubs.none"] + "</p>";
+  }
+  function wireFilters() {
+    var fromSel = $("#yr-from"), toSel = $("#yr-to");
+    if (!fromSel) return;
+    function apply() {
+      var a = +fromSel.value, b = +toSel.value;
+      range = { from: Math.min(a, b), to: Math.max(a, b) };
+      renderFull();
+    }
+    fromSel.addEventListener("change", apply);
+    toSel.addEventListener("change", apply);
+    document.querySelectorAll("[data-quick]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var ys = data.publications.map(function (p) { return p.year; }).filter(function (y) { return typeof y === "number"; });
+        var hi = Math.max.apply(null, ys), lo = Math.min.apply(null, ys), n = +btn.getAttribute("data-quick");
+        range = { from: n ? hi - n + 1 : lo, to: hi };
+        renderFull();
+      });
+    });
+  }
+
   $("#lang-toggle").addEventListener("click", function () {
     lang = lang === "th" ? "en" : "th";
     try { localStorage.setItem("lab-lang", lang); } catch (e) {}
     if (data) render();
   });
 
-  load().then(function (d) { data = d; render(); }).catch(function () {
-    $("#research-list").textContent = UI[lang].loadError;
+  load().then(function (d) { data = d; render(); wireFilters(); }).catch(function (e) {
+    var target = $("#research-list") || $("#pub-full");
+    if (target) target.textContent = UI[lang].loadError;
+    if (window.console) console.error(e);
   });
 })();
