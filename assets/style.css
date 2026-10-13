@@ -118,6 +118,7 @@ main > .block { max-width: 76rem; margin-inline: auto; padding-block: clamp(1.75
 .person .name { font-weight: 500; font-size: 1.05rem; line-height: 1.5; }
 .level { display: inline-block; font-size: 0.8rem; color: var(--accent-ink); border: 1px solid color-mix(in srgb, var(--accent-ink) 45%, transparent); border-radius: 999px; padding: 0.05rem 0.6rem; margin-block: 0.2rem 0.3rem; }
 .person .note, .pi-card .note, .pi-card .role { color: var(--muted); font-size: 0.93rem; font-weight: 300; line-height: 1.6; }
+.person .note .lbl { color: var(--ink); font-weight: 500; }
 .alumni { margin-top: 2.5rem; }
 .alumni h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: 0.75rem; }
 .alumni ul { list-style: none; margin: 0; padding: 0; }
