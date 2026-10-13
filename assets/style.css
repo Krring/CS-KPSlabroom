@@ -108,7 +108,7 @@ main > .block { max-width: 76rem; margin-inline: auto; padding-block: clamp(1.75
 .tile .glyph { width: 36px; height: 36px; margin-bottom: 0.9rem; color: var(--accent-ink); }
 
 /* People */
-.pi-card { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 2rem; align-items: center; margin-bottom: 3.5rem; }
+.pi-card { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 2rem; align-items: center; margin-bottom: 2rem; }
 .pi-card .avatar { width: 168px; height: 168px; font-size: 3.4rem; margin: 0; }
 .pi-card .eyebrow { color: var(--accent-ink); font-size: 0.93rem; }
 .pi-card .name { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 300; line-height: 1.35; }
@@ -118,7 +118,7 @@ main > .block { max-width: 76rem; margin-inline: auto; padding-block: clamp(1.75
 .person .name { font-weight: 500; font-size: 1.05rem; line-height: 1.5; }
 .level { display: inline-block; font-size: 0.8rem; color: var(--accent-ink); border: 1px solid color-mix(in srgb, var(--accent-ink) 45%, transparent); border-radius: 999px; padding: 0.05rem 0.6rem; margin-block: 0.2rem 0.3rem; }
 .person .note, .pi-card .note, .pi-card .role { color: var(--muted); font-size: 0.93rem; font-weight: 300; line-height: 1.6; }
-.alumni { margin-top: 3.5rem; }
+.alumni { margin-top: 2.5rem; }
 .alumni h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: 0.75rem; }
 .alumni ul { list-style: none; margin: 0; padding: 0; }
 .alumni li { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 1rem; padding-block: 0.85rem; border-bottom: 1px solid var(--line); font-size: 0.98rem; }

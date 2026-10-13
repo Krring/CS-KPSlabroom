@@ -17,56 +17,16 @@
     "email": "chatsuda.sak@ku.th"
   },
   {
-    "group": "phd",
-    "name": {
-      "th": "ชื่อนิสิตปริญญาเอก",
-      "en": "PhD student name"
-    },
-    "note": {
-      "th": "หัวข้อวิจัยสั้น ๆ",
-      "en": "Short research topic"
-    },
-    "photo": "",
-    "example": true
-  },
-  {
     "group": "ms",
     "name": {
-      "th": "ชื่อนิสิตปริญญาโท",
-      "en": "MSc student name"
+      "th": "นัยนา ศรีเอี่ยม",
+      "en": "Ms. Naiyana Sriaeam"
     },
     "note": {
-      "th": "การควบคุมโรคดอกไหม้ของกล้วยไม้มอคคาราโดยชีววิธี",
-      "en": "Biocontrol of Mokara orchid flower blight"
+      "th": "",
+      "en": ""
     },
-    "photo": "",
-    "example": true
-  },
-  {
-    "group": "ms",
-    "name": {
-      "th": "ชื่อนิสิตปริญญาโท",
-      "en": "MSc student name"
-    },
-    "note": {
-      "th": "แบคทีเรียส่งเสริมการเจริญเติบโตจากรากหญ้าแฝก",
-      "en": "Plant growth-promoting bacteria from vetiver roots"
-    },
-    "photo": "",
-    "example": true
-  },
-  {
-    "group": "ug",
-    "name": {
-      "th": "ชื่อนิสิตปริญญาตรี",
-      "en": "Undergraduate name"
-    },
-    "note": {
-      "th": "ปัญหาพิเศษ",
-      "en": "Senior project"
-    },
-    "photo": "",
-    "example": true
+    "photo": "img/naiyana-sriaeam.jpg"
   },
   {
     "group": "alumni",
