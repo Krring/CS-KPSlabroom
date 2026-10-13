@@ -3,7 +3,7 @@
 
   var UI = {
     th: {
-      "nav.research": "งานวิจัย", "nav.members": "สมาชิก", "nav.publications": "ผลงานตีพิมพ์",
+      "nav.home": "หน้าแรก", "nav.research": "งานวิจัย", "nav.members": "สมาชิก", "nav.publications": "ผลงานตีพิมพ์",
       "nav.services": "บริการ", "nav.servicesLong": "บริการตรวจวิเคราะห์",
       "nav.news": "ข่าว", "nav.newsLong": "ข่าวและกิจกรรม", "nav.contact": "ติดต่อ",
       "nav.portal": "สำหรับสมาชิกแล็บ",
@@ -38,7 +38,7 @@
       "example": "ตัวอย่าง", "empty": "ยังไม่มีรายการ", "loadError": "โหลดข้อมูลไม่สำเร็จ ตรวจรูปแบบไฟล์ในโฟลเดอร์ data/"
     },
     en: {
-      "nav.research": "Research", "nav.members": "People", "nav.publications": "Publications",
+      "nav.home": "Home", "nav.research": "Research", "nav.members": "People", "nav.publications": "Publications",
       "nav.services": "Services", "nav.servicesLong": "Analytical services",
       "nav.news": "News", "nav.newsLong": "News and events", "nav.contact": "Contact",
       "nav.portal": "Lab members",
