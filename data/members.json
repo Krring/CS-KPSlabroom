@@ -51,17 +51,16 @@
   {
     "group": "alumni",
     "name": {
-      "th": "ชื่อศิษย์เก่า",
-      "en": "Alumni name"
+      "th": "กุลธิดา ปานทยักษ์",
+      "en": "Ms. Kultida Pantayak"
     },
     "role": {
-      "th": "วท.ม. 2567",
-      "en": "M.Sc. 2024"
+      "th": "",
+      "en": ""
     },
     "note": {
-      "th": "ปัจจุบันทำงานที่ ...",
-      "en": "Now at ..."
-    },
-    "example": true
+      "th": "ปัจจุบันทำงานที่ สำนักงานพัฒนาวิทยาศาสตร์และเทคโนโลยีแห่งชาติ (สวทช.)",
+      "en": "Now at the National Science and Technology Development Agency (NSTDA)"
+    }
   }
 ]

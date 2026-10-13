@@ -126,8 +126,8 @@ main > .block { max-width: 76rem; margin-inline: auto; padding-block: clamp(1.75
 .alumni { margin-top: 2.5rem; }
 .alumni h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: 0.75rem; }
 .alumni ul { list-style: none; margin: 0; padding: 0; }
-.alumni li { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 1rem; padding-block: 0.85rem; border-bottom: 1px solid var(--line); font-size: 0.98rem; }
-.alumni li span:not(:first-child) { color: var(--muted); font-weight: 300; }
+.alumni li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 1rem; padding-block: 0.85rem; border-bottom: 1px solid var(--line); font-size: 0.98rem; }
+.alumni li > span:last-child, .alumni .muted { color: var(--muted); font-weight: 300; }
 
 /* Publications */
 .pubs { list-style: none; margin: 0; padding: 0; }

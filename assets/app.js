@@ -139,7 +139,7 @@
     }
     if (alumni.length) {
       html += '<div class="alumni"><h3>' + ui["group.alumni"] + "</h3><ul>" + alumni.map(function (m) {
-        return "<li><span>" + esc(t(m.name)) + badge(m) + "</span><span>" + esc(t(m.role)) + "</span><span>" + esc(t(m.note)) + "</span></li>";
+        return "<li><span>" + esc(t(m.name)) + badge(m) + (t(m.role) ? ' <span class="muted">' + esc(t(m.role)) + "</span>" : "") + "</span><span>" + rich(t(m.note)) + "</span></li>";
       }).join("") + "</ul></div>";
     }
     $("#member-list").innerHTML = html;
