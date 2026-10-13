@@ -1,6 +1,7 @@
-"""Refresh data/publications.json from ORCID, filling details from Crossref.
+"""Refresh data/publications.json from OpenAlex and ORCID, filling details from Crossref.
 
-- Reads public works from the ORCID public API (no key needed for public records).
+- Reads works linked to the ORCID iD from OpenAlex (covers both surnames; no key needed),
+  and also the public works list on ORCID itself.
 - Looks up each DOI on Crossref for authors, volume and pages.
 - Keeps entries already in the file that ORCID does not list (added by hand),
   and keeps hand edits to an entry unless Crossref has a value for an empty field.
@@ -37,8 +38,43 @@ def orcid_works():
             "title": ((s.get("title") or {}).get("title") or {}).get("value", ""),
             "journal": (s.get("journal-title") or {}).get("value", ""),
             "doi": doi.lower(),
+            "authors": "", "volume": "", "pages": "",
         })
     return works
+
+
+def norm(title):
+    return "".join(ch for ch in title.lower().replace("*", "") if ch.isalnum())
+
+
+def openalex_works():
+    url = ("https://api.openalex.org/works?per-page=200&filter=author.orcid:" + ORCID_ID
+           + "&mailto=" + urllib.parse.quote(MAILTO))
+    works = []
+    for w in get_json(url).get("results", []):
+        b = w.get("biblio") or {}
+        pages = b.get("first_page") or ""
+        if b.get("last_page") and b.get("last_page") != pages:
+            pages = f"{pages}-{b['last_page']}"
+        src = ((w.get("primary_location") or {}).get("source") or {}).get("display_name", "")
+        names = [a["author"]["display_name"] for a in w.get("authorships", [])]
+        works.append({
+            "year": w.get("publication_year") or "",
+            "title": w.get("title") or "",
+            "journal": src,
+            "doi": (w.get("doi") or "").replace("https://doi.org/", "").lower(),
+            "authors": ", ".join(short_name(n) for n in names),
+            "volume": b.get("volume") or "",
+            "pages": pages,
+        })
+    return works
+
+
+def short_name(full):
+    parts = full.split()
+    if len(parts) < 2:
+        return full
+    return f"{parts[-1]} {initials(' '.join(parts[:-1]))}"
 
 
 def initials(given):
@@ -74,18 +110,37 @@ def crossref(doi):
 
 def main():
     existing = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else []
-    by_doi = {e.get("doi", "").lower(): e for e in existing if e.get("doi")}
-    manual = [e for e in existing if not e.get("doi")]
+    entries = {}
+    for e in existing:
+        entries[e.get("doi", "").lower() or norm(e.get("title", ""))] = e
 
-    for w in orcid_works():
-        key = w["doi"] or w["title"].lower()
-        entry = by_doi.get(key, {})
-        for k, v in w.items():
+    def find(w):
+        if w["doi"] and w["doi"] in entries:
+            return w["doi"]
+        t = norm(w["title"])
+        for k, e in entries.items():
+            if norm(e.get("title", "")) == t:
+                return k
+        return w["doi"] or t
+
+    incoming = []
+    for source in (openalex_works, orcid_works):
+        try:
+            incoming += source()
+        except Exception as e:  # one source down should not stop the other
+            print("source failed", source.__name__, e)
+
+    for w in incoming:
+        if not w.get("title"):
+            continue
+        key = find(w)
+        entry = entries.get(key, {})
+        for k, v in w.items():  # fill empty fields only; hand edits win
             if v and not entry.get(k):
                 entry[k] = v
-        by_doi[key] = entry
+        entries[key] = entry
 
-    for key, entry in by_doi.items():
+    for entry in entries.values():
         if not entry.get("doi"):
             continue
         needs = [k for k in ("authors", "volume", "pages", "journal") if not entry.get(k)]
@@ -101,8 +156,8 @@ def main():
 
     result = [
         {k: e.get(k, "") for k in ("year", "authors", "title", "journal", "volume", "pages", "doi")}
-        for e in by_doi.values()
-    ] + manual
+        for e in entries.values()
+    ]
     result.sort(key=lambda e: (-(e["year"] if isinstance(e["year"], int) else 0), e["title"]))
     new_text = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
     if OUT.exists() and OUT.read_text(encoding="utf-8") == new_text:
