@@ -14,7 +14,25 @@
       "en": "née Sakdapetsiri"
     },
     "photo": "img/chatsuda-chirapanda.jpg",
-    "email": "chatsuda.sak@ku.th"
+    "email": "chatsuda.sak@ku.th",
+    "hindex": {
+      "value": 8,
+      "source": "Scopus",
+      "asOf": {
+        "th": "ต.ค. 2569",
+        "en": "Oct 2026"
+      }
+    },
+    "links": [
+      {
+        "label": "Scopus",
+        "url": "https://www.scopus.com/authid/detail.uri?authorId=57148477100"
+      },
+      {
+        "label": "ORCID",
+        "url": "https://orcid.org/0000-0002-4092-6575"
+      }
+    ]
   },
   {
     "group": "ms",

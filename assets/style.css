@@ -123,6 +123,11 @@ main > .block { max-width: 76rem; margin-inline: auto; padding-block: clamp(1.75
 .level.award { background: var(--moss); border-color: transparent; color: var(--accent-ink); }
 .person .note .lbl { color: var(--ink); font-weight: 500; }
 .nw { white-space: nowrap; }
+.metrics { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; margin-top: 0.75rem; }
+.stat { font-size: 0.93rem; color: var(--muted); font-weight: 300; }
+.stat b { color: var(--accent-ink); font-weight: 600; font-size: 1.05rem; margin-right: 0.15rem; }
+.pill.small { padding: 0.45rem 0.85rem; font-size: 0.85rem; }
+.head p a { color: var(--accent-ink); }
 .alumni { margin-top: 2.5rem; }
 .alumni h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: 0.75rem; }
 .alumni ul { list-style: none; margin: 0; padding: 0; }

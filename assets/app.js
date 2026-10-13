@@ -9,7 +9,7 @@
       "nav.portal": "สำหรับสมาชิกแล็บ",
       "hero.join": "สนใจเข้าร่วมแล็บ", "hero.research": "ดูงานวิจัยของเรา",
       "research.lead": "ห้าแนวทางที่แล็บทำอยู่ ตั้งแต่ระดับยีนไปจนถึงในแปลงปลูก",
-      "pubs.note": "รายการเต็มดูได้ที่ ORCID และ Scopus",
+      "pubs.note": "รายการเต็มดูได้ที่",
       "svc.note": "ติดต่อสอบถามรายละเอียด ระยะเวลา และค่าบริการก่อนส่งตัวอย่าง",
       "svc.sample": "ตัวอย่างที่ส่ง",
       "contact.address": "ที่อยู่", "contact.email": "อีเมล",
@@ -29,7 +29,7 @@
       "nav.portal": "Lab members",
       "hero.join": "Join the lab", "hero.research": "See our research",
       "research.lead": "Five lines of work, from genes in a genome to plants in the field",
-      "pubs.note": "Full list on ORCID and Scopus",
+      "pubs.note": "Full list on",
       "svc.note": "Please ask about scope, turnaround, and fees before sending samples",
       "svc.sample": "Send",
       "contact.address": "Address", "contact.email": "Email",
@@ -83,6 +83,17 @@
     });
   }
 
+  function metrics(m) {
+    var out = [];
+    if (m.hindex && m.hindex.value != null) {
+      var src = [m.hindex.source, m.hindex.asOf ? t(m.hindex.asOf) : ""].filter(Boolean).join(", ");
+      out.push('<span class="stat"><b>h-index ' + esc(m.hindex.value) + "</b>" + (src ? " <span>(" + esc(src) + ")</span>" : "") + "</span>");
+    }
+    (m.links || []).forEach(function (l) {
+      out.push('<a class="pill ghost small" href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.label) + "</a>");
+    });
+    return out.length ? '<div class="metrics">' + out.join("") + "</div>" : "";
+  }
   function avatar(m) {
     return m.photo ? '<img class="avatar" src="' + esc(m.photo) + '" alt="">'
       : '<span class="avatar" aria-hidden="true">' + esc(initial(t(m.name))) + "</span>";
@@ -127,7 +138,7 @@
       return '<div class="pi-card">' + avatar(m) + '<div><div class="eyebrow">' + ui["group.pi"] + '</div><div class="name">' +
         esc(t(m.name)) + badge(m) + '</div><div class="role">' + esc(t(m.role)) + "</div>" +
         (m.note ? '<div class="note">' + rich(t(m.note)) + "</div>" : "") +
-        (m.email ? '<div class="note">' + esc(m.email) + "</div>" : "") + "</div></div>";
+        (m.email ? '<div class="note">' + esc(m.email) + "</div>" : "") + metrics(m) + "</div></div>";
     }).join("");
     if (current.length) {
       html += '<div class="people">' + current.map(function (m) {
