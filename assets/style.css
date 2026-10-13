@@ -122,6 +122,7 @@ main > .block { max-width: 76rem; margin-inline: auto; padding-block: clamp(1.75
 .chips .level { margin: 0; }
 .level.award { background: var(--moss); border-color: transparent; color: var(--accent-ink); }
 .person .note .lbl { color: var(--ink); font-weight: 500; }
+.nw { white-space: nowrap; }
 .alumni { margin-top: 2.5rem; }
 .alumni h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: 0.75rem; }
 .alumni ul { list-style: none; margin: 0; padding: 0; }

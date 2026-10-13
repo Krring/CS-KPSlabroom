@@ -63,7 +63,7 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   }
-  function rich(v) { return esc(v).replace(/\*([^*]+)\*/g, "<i>$1</i>"); }
+  function rich(v) { return esc(v).replace(/\*([^*]+)\*/g, "<i>$1</i>").replace(/\{([^}]+)\}/g, '<span class="nw">$1</span>'); }
   function t(v) { return v && typeof v === "object" ? (v[lang] || v.th || v.en || "") : (v || ""); }
   function badge(item) { return item && item.example ? '<span class="badge">' + UI[lang].example + "</span>" : ""; }
   function isPlaceholder(u) { return !u || /ใส่ลิงก์/.test(u); }
