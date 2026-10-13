@@ -244,3 +244,22 @@ main.sub { max-width: 76rem; margin-inline: auto; }
 .booking-side ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.5rem; color: var(--muted); font-weight: 300; font-size: 0.97rem; }
 .booking-side p { color: var(--muted); font-weight: 300; font-size: 0.97rem; }
 @media (max-width: 860px) { .booking-layout { grid-template-columns: minmax(0, 1fr); } .booking-box iframe { height: 900px; } }
+
+.form-layout { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr); gap: 2rem; margin-top: 2.5rem; scroll-margin-top: 6rem; }
+.contact-form { display: grid; gap: 1rem; background: var(--surface); border-radius: var(--r-md); padding: clamp(1.25rem, 3vw, 2rem); }
+.contact-form h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); font-weight: 300; }
+.contact-form .hint { color: var(--muted); font-weight: 300; font-size: 0.95rem; margin-top: -0.5rem; }
+.field-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
+.field { display: grid; gap: 0.35rem; }
+.field label { font-size: 0.93rem; font-weight: 500; }
+.field input, .field select, .field textarea { font: 400 1rem/1.6 var(--font); color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 0.65rem 0.85rem; width: 100%; }
+.field textarea { resize: vertical; min-height: 8rem; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; }
+.form-foot .pill[disabled] { opacity: 0.6; cursor: progress; }
+.status { font-size: 0.93rem; color: var(--muted); }
+.status.ok { color: var(--accent-ink); }
+.status.bad { color: var(--flag); }
+.booking-side .addr { color: var(--ink); font-weight: 500; margin-bottom: 0.6rem; user-select: all; }
+@media (max-width: 860px) { .form-layout { grid-template-columns: minmax(0, 1fr); } }

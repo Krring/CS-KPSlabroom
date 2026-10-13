@@ -14,16 +14,21 @@
       "svc.sample": "ตัวอย่างที่ส่ง",
       "contact.address": "ที่อยู่", "contact.email": "อีเมล",
       "contact.joinTitle": "มาทำวิจัยด้วยกัน", "contact.book": "นัดพบอาจารย์",
-      "ct.title": "ติดต่อและนัดพบอาจารย์", "ct.lead": "เลือกช่องทางที่สะดวก ถ้าต้องการพบตัวต่อตัวหรือคุยออนไลน์ ให้จองเวลาจากปฏิทินด้านล่าง ระบบจะส่งอีเมลยืนยันให้ทันที",
+      "ct.title": "ติดต่อและนัดพบอาจารย์", "ct.lead": "ต้องการพบอาจารย์ที่ห้องปฏิบัติการ ให้จองเวลาจากปฏิทินด้านล่าง ระบบจะส่งอีเมลยืนยันให้ทันที ถ้ามีคำถามหรือเรื่องอื่น ส่งข้อความผ่านแบบฟอร์มได้เลย",
       "ct.inperson": "พบที่ห้องปฏิบัติการ", "ct.inpersonBody": "คุยเรื่องงานวิจัย วิทยานิพนธ์ หรือดูการทดลอง จองเวลาก่อนทุกครั้ง อาจารย์อาจอยู่สอนหรือลงแปลง",
-      "ct.online": "ประชุมออนไลน์", "ct.onlineBody": "เลือกช่วงเวลาที่มีป้ายออนไลน์ในปฏิทิน ลิงก์ Google Meet จะอยู่ในอีเมลยืนยัน",
-      "ct.email": "ส่งอีเมล", "ct.emailBody": "เหมาะกับคำถามสั้น ๆ ส่งไฟล์ หรือนัดล่วงหน้านาน ๆ อาจารย์ตอบในวันทำการ",
+      "ct.email": "ส่งข้อความ", "ct.emailBody": "เหมาะกับคำถาม ขอข้อมูลบริการ หรือสนใจเข้าร่วมแล็บ อาจารย์ตอบกลับทางอีเมลในวันทำการ",
       "ct.copy": "คัดลอกอีเมล", "ct.copied": "คัดลอกแล้ว", "ct.writeMail": "เขียนอีเมล", "ct.mailSubject": "[นัดพบอาจารย์] ",
-      "ct.calTitle": "ตารางเวลาว่าง", "ct.calBody": "ช่องที่แสดงคือเวลาที่ว่างจริงตามปฏิทินของอาจารย์ เลือกเวลา กรอกชื่อ อีเมล และเรื่องที่ต้องการคุย",
+      "ct.calTitle": "ตารางเวลาว่าง", "ct.calBody": "ช่องที่แสดงคือเวลาที่ว่างจริงตามปฏิทินของอาจารย์ เลือกเวลา แล้วกรอกชื่อ อีเมล และเรื่องที่ต้องการคุย",
       "ct.openCal": "เปิดปฏิทินจองนัด", "ct.openNew": "เปิดในหน้าต่างใหม่",
-      "ct.soonTitle": "กำลังเปิดตารางนัดออนไลน์", "ct.soonBody": "ระหว่างนี้ส่งอีเมลเพื่อขอนัดได้ โปรดระบุเรื่องที่ต้องการคุยและวันเวลาที่สะดวกสองถึงสามช่วง",
+      "ct.soonTitle": "กำลังเปิดตารางนัดออนไลน์", "ct.soonBody": "ระหว่างนี้ขอนัดผ่านแบบฟอร์มด้านล่างได้ โปรดระบุเรื่องที่ต้องการคุยและวันเวลาที่สะดวกสองถึงสามช่วง",
       "ct.prepTitle": "ก่อนมาพบ", "ct.prep1": "บอกหัวข้อที่ต้องการคุยตอนจอง จะได้ใช้เวลาได้เต็มที่", "ct.prep2": "แนบไฟล์ที่เกี่ยวข้องมาก่อนอย่างน้อยหนึ่งวัน เช่น ร่างบท ผลการทดลอง", "ct.prep3": "ถ้าไม่สะดวกตามนัด ยกเลิกหรือเลื่อนจากลิงก์ในอีเมลยืนยัน",
       "ct.where": "ที่ตั้ง",
+      "ct.formTitle": "ส่งข้อความถึงอาจารย์", "ct.formLead": "ข้อความจะส่งถึงอีเมลของอาจารย์ และอาจารย์จะตอบกลับไปที่อีเมลที่กรอก",
+      "ct.fName": "ชื่อ-นามสกุล", "ct.fEmail": "อีเมล", "ct.fTopic": "เรื่อง", "ct.fMessage": "ข้อความ",
+      "ct.tPick": "เลือกเรื่องที่ติดต่อ", "ct.tJoin": "สนใจเรียนต่อหรือเข้าร่วมแล็บ", "ct.tMeet": "ขอนัดพบ", "ct.tService": "บริการตรวจวิเคราะห์", "ct.tCollab": "ความร่วมมือวิจัย", "ct.tOther": "อื่น ๆ",
+      "ct.send": "ส่งข้อความ", "ct.sending": "กำลังส่ง…", "ct.sent": "ส่งข้อความแล้ว อาจารย์จะตอบกลับทางอีเมล",
+      "ct.err": "ส่งไม่สำเร็จ ลองอีกครั้ง หรือส่งอีเมลโดยตรงตามที่อยู่ด้านขวา", "ct.missing": "กรอกชื่อ อีเมล เรื่อง และข้อความให้ครบ", "ct.badEmail": "รูปแบบอีเมลไม่ถูกต้อง",
+      "ct.mailApp": "เปิดแอปอีเมลพร้อมข้อความที่กรอกแล้ว กดส่งในแอปอีเมลได้เลย", "ct.directEmail": "หรือส่งอีเมลโดยตรง",
       "group.pi": "หัวหน้าห้องปฏิบัติการ", "group.postdoc": "นักวิจัยหลังปริญญาเอก",
       "group.phd": "นิสิตปริญญาเอก", "group.ms": "นิสิตปริญญาโท",
       "group.ug": "นิสิตปริญญาตรี", "group.staff": "เจ้าหน้าที่", "group.alumni": "ศิษย์เก่า",
@@ -44,16 +49,21 @@
       "svc.sample": "Send",
       "contact.address": "Address", "contact.email": "Email",
       "contact.joinTitle": "Do research with us", "contact.book": "Book a meeting",
-      "ct.title": "Contact and appointments", "ct.lead": "Pick whatever works for you. To meet in person or online, book a time in the calendar below and you will get a confirmation email right away.",
+      "ct.title": "Contact and appointments", "ct.lead": "To meet the PI at the lab, book a time in the calendar below and you will get a confirmation email right away. For anything else, send a message with the form.",
       "ct.inperson": "Meet at the lab", "ct.inpersonBody": "For research, thesis work, or to see an experiment. Please always book first; the PI may be teaching or in the field.",
-      "ct.online": "Online meeting", "ct.onlineBody": "Choose a slot marked online. The Google Meet link is in your confirmation email.",
-      "ct.email": "Email", "ct.emailBody": "Best for quick questions, sending files, or arranging a meeting far ahead. Replies on working days.",
+      "ct.email": "Send a message", "ct.emailBody": "For questions, service enquiries, or joining the lab. The PI replies by email on working days.",
       "ct.copy": "Copy email", "ct.copied": "Copied", "ct.writeMail": "Write an email", "ct.mailSubject": "[Meeting request] ",
       "ct.calTitle": "Available times", "ct.calBody": "Slots shown are real free times from the PI's calendar. Pick one, then enter your name, email, and what you would like to discuss.",
       "ct.openCal": "Open booking calendar", "ct.openNew": "Open in a new window",
-      "ct.soonTitle": "Online booking opens soon", "ct.soonBody": "Meanwhile, email to request a meeting. Please include the topic and two or three times that suit you.",
+      "ct.soonTitle": "Online booking opens soon", "ct.soonBody": "Meanwhile, request a meeting with the form below. Please include the topic and two or three times that suit you.",
       "ct.prepTitle": "Before you come", "ct.prep1": "Say what you want to discuss when you book, so the time is well used.", "ct.prep2": "Send related files at least a day ahead, such as a draft chapter or results.", "ct.prep3": "If you cannot make it, cancel or reschedule from the link in your confirmation email.",
       "ct.where": "Location",
+      "ct.formTitle": "Message the PI", "ct.formLead": "Your message goes to the PI's inbox, and the reply comes to the email you enter.",
+      "ct.fName": "Full name", "ct.fEmail": "Email", "ct.fTopic": "Topic", "ct.fMessage": "Message",
+      "ct.tPick": "Choose a topic", "ct.tJoin": "Graduate study or joining the lab", "ct.tMeet": "Meeting request", "ct.tService": "Analytical services", "ct.tCollab": "Research collaboration", "ct.tOther": "Other",
+      "ct.send": "Send message", "ct.sending": "Sending…", "ct.sent": "Message sent. You will get a reply by email.",
+      "ct.err": "Could not send. Try again, or email directly using the address on the right.", "ct.missing": "Please fill in name, email, topic and message.", "ct.badEmail": "That email address does not look right.",
+      "ct.mailApp": "Your email app opened with the message filled in. Press send there.", "ct.directEmail": "Or email directly",
       "group.pi": "Principal investigator", "group.postdoc": "Postdoctoral researchers",
       "group.phd": "Ph.D. students", "group.ms": "M.Sc. students",
       "group.ug": "Undergraduate students", "group.staff": "Staff", "group.alumni": "Alumni",
@@ -220,8 +230,6 @@
     var open = $("#booking-open");
     if (open) { open.hidden = !link; if (link) open.href = link; }
     $("#ct-email").textContent = s.email;
-    var mail = $("#ct-mail");
-    mail.href = "mailto:" + s.email + "?subject=" + encodeURIComponent(ui["ct.mailSubject"]);
   }
 
   var ME = /\b(Sakdapetsiri C|Chirapanda C)\b/g;
@@ -278,6 +286,38 @@
       var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
     }
   }
+  function wireForm() {
+    var f = $("#contact-form"); if (!f) return;
+    var status = $("#cf-status"), btn = $("#cf-submit");
+    function say(k, ok) { status.textContent = UI[lang][k]; status.className = "status " + (ok ? "ok" : "bad"); }
+    f.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var el = f.elements;
+      var v = {
+        name: el.namedItem("name").value.trim(), email: el.namedItem("email").value.trim(), topic: el.namedItem("topic").value,
+        topicLabel: el.namedItem("topic").options[el.namedItem("topic").selectedIndex].text,
+        message: el.namedItem("message").value.trim(), website: el.namedItem("website").value, lang: lang
+      };
+      if (!v.name || !v.email || !v.topic || !v.message) return say("ct.missing");
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)) return say("ct.badEmail");
+      if (v.website) return say("ct.sent", true); // bot trap
+      var endpoint = data.site.contactFormEndpoint;
+      if (!endpoint || isPlaceholder(endpoint)) {
+        var body = v.message + "\n\n— " + v.name + " <" + v.email + ">";
+        location.href = "mailto:" + data.site.email + "?subject=" + encodeURIComponent(ui_subject(v)) + "&body=" + encodeURIComponent(body);
+        return say("ct.mailApp", true);
+      }
+      btn.disabled = true; status.className = "status"; status.textContent = UI[lang]["ct.sending"];
+      fetch(endpoint, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(v) })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res && res.ok) { f.reset(); say("ct.sent", true); } else { say("ct.err"); }
+        })
+        .catch(function () { say("ct.err"); })
+        .then(function () { btn.disabled = false; });
+    });
+    function ui_subject(v) { return "[" + v.topicLabel + "] " + v.name; }
+  }
   function wireFilters() {
     var fromSel = $("#yr-from"), toSel = $("#yr-to");
     if (!fromSel) return;
@@ -304,7 +344,7 @@
     if (data) render();
   });
 
-  load().then(function (d) { data = d; render(); wireFilters(); wireCopy(); }).catch(function (e) {
+  load().then(function (d) { data = d; render(); wireFilters(); wireCopy(); wireForm(); }).catch(function (e) {
     var target = $("#research-list") || $("#pub-full");
     if (target) target.textContent = UI[lang].loadError;
     if (window.console) console.error(e);

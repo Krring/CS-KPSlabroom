@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=20">
+<link rel="stylesheet" href="assets/style.css?v=21">
 </head>
 <body>
 <header class="top">
@@ -45,20 +45,10 @@
         <a class="pill ghost small" href="#booking" data-i18n="ct.calTitle">ตารางเวลาว่าง</a>
       </article>
       <article class="way">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="8" width="17" height="16" rx="3"/><path d="m21 14 7-4v12l-7-4"/></svg>
-        <h3 data-i18n="ct.online">ประชุมออนไลน์</h3>
-        <p data-i18n="ct.onlineBody"></p>
-        <a class="pill ghost small" href="#booking" data-i18n="ct.calTitle">ตารางเวลาว่าง</a>
-      </article>
-      <article class="way">
         <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="7" width="24" height="18" rx="3"/><path d="m5 9 11 8 11-8"/></svg>
-        <h3 data-i18n="ct.email">ส่งอีเมล</h3>
+        <h3 data-i18n="ct.email">ส่งข้อความ</h3>
         <p data-i18n="ct.emailBody"></p>
-        <p class="addr" id="ct-email"></p>
-        <div class="row">
-          <button class="pill ghost small" id="ct-copy" type="button" data-i18n="ct.copy">คัดลอกอีเมล</button>
-          <a class="pill ghost small" id="ct-mail" href="#" data-i18n="ct.writeMail">เขียนอีเมล</a>
-        </div>
+        <a class="pill ghost small" href="#message" data-i18n="ct.formTitle">เขียนข้อความ</a>
       </article>
     </div>
 
@@ -84,6 +74,50 @@
         <p data-bind="address"></p>
       </aside>
     </div>
+
+    <div class="form-layout" id="message">
+      <form class="contact-form" id="contact-form" novalidate>
+        <h2 data-i18n="ct.formTitle">ส่งข้อความถึงอาจารย์</h2>
+        <p class="hint" data-i18n="ct.formLead"></p>
+        <div class="field-row">
+          <div class="field">
+            <label for="cf-name" data-i18n="ct.fName">ชื่อ-นามสกุล</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="100">
+          </div>
+          <div class="field">
+            <label for="cf-email" data-i18n="ct.fEmail">อีเมล</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="120">
+          </div>
+        </div>
+        <div class="field">
+          <label for="cf-topic" data-i18n="ct.fTopic">เรื่อง</label>
+          <select id="cf-topic" name="topic" required>
+            <option value="" data-i18n="ct.tPick">เลือกเรื่องที่ติดต่อ</option>
+            <option value="join" data-i18n="ct.tJoin">สนใจเรียนต่อหรือเข้าร่วมแล็บ</option>
+            <option value="meet" data-i18n="ct.tMeet">ขอนัดพบ</option>
+            <option value="service" data-i18n="ct.tService">บริการตรวจวิเคราะห์</option>
+            <option value="collab" data-i18n="ct.tCollab">ความร่วมมือวิจัย</option>
+            <option value="other" data-i18n="ct.tOther">อื่น ๆ</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cf-message" data-i18n="ct.fMessage">ข้อความ</label>
+          <textarea id="cf-message" name="message" rows="5" required maxlength="3000"></textarea>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="cf-website">Website</label><input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="form-foot">
+          <button class="pill solid" type="submit" id="cf-submit" data-i18n="ct.send">ส่งข้อความ</button>
+          <p class="status" id="cf-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+      <aside class="booking-side">
+        <h3 data-i18n="ct.directEmail">หรือส่งอีเมลโดยตรง</h3>
+        <p class="addr" id="ct-email"></p>
+        <div class="row">
+          <button class="pill ghost small" id="ct-copy" type="button" data-i18n="ct.copy">คัดลอกอีเมล</button>
+        </div>
+      </aside>
+    </div>
   </section>
 </main>
 
@@ -92,6 +126,6 @@
   <span data-bind="department"></span>
 </footer>
 
-<script src="assets/app.js?v=20"></script>
+<script src="assets/app.js?v=21"></script>
 </body>
 </html>

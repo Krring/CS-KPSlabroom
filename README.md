@@ -70,6 +70,13 @@ img/                  รูปสมาชิกและรูปกิจก�
 3. ลิงก์หน้าจองแบบปกติ (Copy link) ใส่ที่ `bookingUrl` ใช้กับปุ่ม "เปิดในหน้าต่างใหม่"
 ถ้ายังไม่ใส่ลิงก์ หน้าติดต่อจะแสดงข้อความให้ส่งอีเมลแทน
 
+### แบบฟอร์มส่งข้อความ (หน้า contact.html)
+ส่งข้อความเข้าอีเมลอาจารย์ผ่าน Google Apps Script และเก็บสำเนาไว้ใน Google Sheet
+1. เปิด https://script.google.com สร้างโปรเจกต์ใหม่ วางโค้ดจาก `scripts/contact-form.gs`
+2. Deploy → New deployment → Web app → Execute as: **Me**, Who has access: **Anyone** แล้วอนุญาตสิทธิ์
+3. คัดลอก Web app URL (ลงท้าย `/exec`) ใส่ที่ `contactFormEndpoint` ใน `data/site.json`
+ถ้ายังไม่ใส่ URL ปุ่มส่งจะเปิดแอปอีเมลของผู้ส่งพร้อมข้อความที่กรอกไว้แทน
+
 - `bookingUrl` ลิงก์หน้าจองนัดจาก Google Calendar (Appointment schedule)
 - `membersPortalUrl` ลิงก์ Google Sites คลังความรู้สำหรับสมาชิกแล็บ (ตั้งสิทธิ์ให้เฉพาะบัญชีที่อนุญาต)
 
