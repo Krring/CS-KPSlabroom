@@ -42,5 +42,5 @@
   },
   "bookingEmbedUrl": "",
   "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%9E%E0%B8%B7%E0%B8%8A+%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%81%E0%B8%AA%E0%B8%99",
-  "contactFormEndpoint": ""
+  "contactFormEndpoint": "https://script.google.com/macros/s/AKfycbwD4-KfloI_7kVvbsK2H1h9kW-rMedKnqYogFzCYWqP0bXt2nUOS3335HoCitLLpFrW/exec"
 }
