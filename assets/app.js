@@ -63,6 +63,7 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   }
+  function rich(v) { return esc(v).replace(/\*([^*]+)\*/g, "<i>$1</i>"); }
   function t(v) { return v && typeof v === "object" ? (v[lang] || v.th || v.en || "") : (v || ""); }
   function badge(item) { return item && item.example ? '<span class="badge">' + UI[lang].example + "</span>" : ""; }
   function isPlaceholder(u) { return !u || /ใส่ลิงก์/.test(u); }
@@ -113,7 +114,7 @@
 
     $("#research-list").innerHTML = data.research.map(function (r, i) {
       return '<article class="tile"><svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-        GLYPHS[i % GLYPHS.length] + "</svg><h3>" + esc(t(r.title)) + "</h3><p>" + esc(t(r.body)) + "</p></article>";
+        GLYPHS[i % GLYPHS.length] + "</svg><h3>" + esc(t(r.title)) + "</h3><p>" + rich(t(r.body)) + "</p></article>";
     }).join("");
 
     var M = data.members;
@@ -125,14 +126,14 @@
     var html = pis.map(function (m) {
       return '<div class="pi-card">' + avatar(m) + '<div><div class="eyebrow">' + ui["group.pi"] + '</div><div class="name">' +
         esc(t(m.name)) + badge(m) + '</div><div class="role">' + esc(t(m.role)) + "</div>" +
-        (m.note ? '<div class="note">' + esc(t(m.note)) + "</div>" : "") +
+        (m.note ? '<div class="note">' + rich(t(m.note)) + "</div>" : "") +
         (m.email ? '<div class="note">' + esc(m.email) + "</div>" : "") + "</div></div>";
     }).join("");
     if (current.length) {
       html += '<div class="people">' + current.map(function (m) {
         return '<div class="person">' + avatar(m) + '<div class="name">' + esc(t(m.name)) + badge(m) + "</div>" +
           '<span class="level">' + (ui["lvl." + m.group] || esc(t(m.role))) + "</span>" +
-          (m.note ? '<div class="note">' + esc(t(m.note)) + "</div>" : "") + "</div>";
+          (m.note ? '<div class="note">' + rich(t(m.note)) + "</div>" : "") + "</div>";
       }).join("") + "</div>";
     }
     if (alumni.length) {
@@ -146,7 +147,7 @@
     $("#pub-list").innerHTML = pubs.length ? pubs.map(function (p) {
       var where = "<i>" + esc(p.journal) + "</i>" + (p.volume ? " " + esc(p.volume) : "") + (p.pages ? ": " + esc(p.pages) : "");
       var doi = p.doi ? ' <a href="https://doi.org/' + esc(p.doi) + '" target="_blank" rel="noopener">doi:' + esc(p.doi) + "</a>" : "";
-      return '<li class="pub"><span class="yr">' + esc(p.year) + '</span><div><div class="t">' + esc(p.title) + badge(p) +
+      return '<li class="pub"><span class="yr">' + esc(p.year) + '</span><div><div class="t">' + rich(p.title) + badge(p) +
         '</div><div class="meta">' + (p.authors ? esc(p.authors) + ". " : "") + where + "." + doi + "</div></div></li>";
     }).join("") : '<li class="pub"><span></span><div>' + ui.empty + "</div></li>";
 
