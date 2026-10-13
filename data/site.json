@@ -2,7 +2,7 @@
   "_note": "ข้อมูลทั่วไปของแล็บ แก้ข้อความในเครื่องหมาย \" \" ได้เลย ทุกช่องมีภาษาไทย (th) และอังกฤษ (en)",
   "labName": {
     "th": "ห้องปฏิบัติการชีวนิเวศของแบคทีเรียและการควบคุมโรคพืชโดยชีววิธี",
-    "en": "Laboratory of Bacterial Ecology and Biological Control of Plant Diseases"
+    "en": "Laboratory of Microbiome and Biological Control of Plant Diseases"
   },
   "heroLines": {
     "_note": "ชื่อแล็บบนหน้าแรก แบ่งเป็นท่อน เพื่อไม่ให้ตัดคำกลางคำ",
@@ -14,8 +14,8 @@
     ],
     "en": [
       "Laboratory of",
-      "Bacterial Ecology",
-      "and Biological Control",
+      "Microbiome and",
+      "Biological Control",
       "of Plant Diseases"
     ]
   },
@@ -28,8 +28,8 @@
     "en": "We study the bacteria that live with plants, from naming and classifying them and reading their genomes to putting them to work against plant disease and for plant growth."
   },
   "address": {
-    "th": "ภาควิชาโรคพืช คณะเกษตร กำแพงแสน มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน ต.กำแพงแสน อ.กำแพงแสน จ.นครปฐม 73140",
-    "en": "Department of Plant Pathology, Faculty of Agriculture at Kamphaeng Saen, Kasetsart University, Kamphaeng Saen, Nakhon Pathom 73140, Thailand"
+    "th": "ห้องปฏิบัติการชีวนิเวศของแบคทีเรียและการควบคุมโดยชีววิธี ภาควิชาโรคพืช คณะเกษตร กำแพงแสน มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน ต.กำแพงแสน อ.กำแพงแสน จ.นครปฐม 73140",
+    "en": "Laboratory of Microbiome and Biological Control of Plant Diseases, Department of Plant Pathology, Faculty of Agriculture at Kamphaeng Saen, Kasetsart University, Kamphaeng Saen, Nakhon Pathom 73140, Thailand"
   },
   "email": "chatsuda.sak@ku.th",
   "phone": "",

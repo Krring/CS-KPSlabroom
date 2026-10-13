@@ -39,7 +39,7 @@
       "group.ug": "Undergraduate students", "group.staff": "Staff", "group.alumni": "Alumni",
       "lvl.postdoc": "Postdoc", "lvl.phd": "PhD", "lvl.ms": "MSc", "lvl.ug": "BSc", "lvl.staff": "Staff",
       "kicker": "Department of Plant Pathology, Kasetsart University, Kamphaeng Saen",
-      "short": "Bacterial Ecology & Biocontrol Lab",
+      "short": "Microbiome & Biocontrol Lab",
       "example": "Example", "empty": "Nothing here yet", "loadError": "Could not load data. Check the file format in the data/ folder"
     }
   };
