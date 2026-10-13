@@ -19,7 +19,7 @@
       "group.ug": "นิสิตปริญญาตรี", "group.staff": "เจ้าหน้าที่", "group.alumni": "ศิษย์เก่า",
       "lvl.postdoc": "นักวิจัยหลังปริญญาเอก", "lvl.phd": "ป.เอก", "lvl.ms": "ป.โท", "lvl.ug": "ป.ตรี", "topic": "หัวข้อวิจัย:", "lvl.staff": "เจ้าหน้าที่",
       "kicker": "ภาควิชาโรคพืช คณะเกษตร กำแพงแสน มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน",
-      "short": "แล็บชีวนิเวศแบคทีเรียและชีววิธี",
+      "short": "Microbiome and Biocontrol Laboratory",
       "example": "ตัวอย่าง", "empty": "ยังไม่มีรายการ", "loadError": "โหลดข้อมูลไม่สำเร็จ ตรวจรูปแบบไฟล์ในโฟลเดอร์ data/"
     },
     en: {
@@ -39,7 +39,7 @@
       "group.ug": "Undergraduate students", "group.staff": "Staff", "group.alumni": "Alumni",
       "lvl.postdoc": "Postdoc", "lvl.phd": "Ph.D.", "lvl.ms": "M.Sc.", "lvl.ug": "B.Sc.", "topic": "Research topic:", "lvl.staff": "Staff",
       "kicker": "Department of Plant Pathology, Faculty of Agriculture at Kamphaeng Saen, Kasetsart University, Kamphaeng Saen Campus",
-      "short": "Microbiome & Biocontrol Lab",
+      "short": "Microbiome and Biocontrol Laboratory",
       "example": "Example", "empty": "Nothing here yet", "loadError": "Could not load data. Check the file format in the data/ folder"
     }
   };
