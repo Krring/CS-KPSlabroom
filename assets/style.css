@@ -92,9 +92,9 @@ nav a:hover { color: var(--ink); }
 .cta { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.4rem; }
 
 /* Sections */
-main > .block { max-width: 76rem; margin-inline: auto; padding-block: clamp(2.5rem, 5vw, 3.5rem) 0; scroll-margin-top: 6rem; }
-.head { display: flex; justify-content: space-between; align-items: end; gap: 1rem 3rem; flex-wrap: wrap; margin-bottom: 1.75rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
-.head h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.3; }
+main > .block { max-width: 76rem; margin-inline: auto; padding-block: clamp(1.75rem, 3vw, 2.25rem) 0; scroll-margin-top: 6rem; }
+.head { display: flex; justify-content: space-between; align-items: end; gap: 1rem 3rem; flex-wrap: wrap; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--line); }
+.head h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); font-weight: 300; line-height: 1.2; }
 .head p { color: var(--muted); max-width: 30rem; font-size: 0.98rem; }
 
 .bento { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
@@ -151,7 +151,7 @@ main > .block { max-width: 76rem; margin-inline: auto; padding-block: clamp(2.5r
 
 /* Contact */
 .contact {
-  max-width: 76rem; margin: clamp(2.5rem, 5vw, 3.5rem) auto 0;
+  max-width: 76rem; margin: clamp(1.75rem, 3vw, 2.25rem) auto 0;
   background: var(--moss); color: var(--on-moss); border-radius: var(--r-lg);
   padding: clamp(2.25rem, 5vw, 4rem); display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 3rem; scroll-margin-top: 6rem;
 }
