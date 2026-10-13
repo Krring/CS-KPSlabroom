@@ -165,92 +165,6 @@
     }).join("") : "<p>" + ui.empty + "</p>";
   }
 
-  /* Hero: branching hyphae grow once on load */
-  var hy = { segs: [], spores: [], raf: 0 };
-  function simulate(w, h) {
-    var seed = 11;
-    function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
-    var wide = w > 760;
-    var origins = wide
-      ? [[w * 0.86, h * 0.72], [w * 0.7, h * 1.02], [w * 1.02, h * 0.25]]
-      : [[w * 0.95, h * 0.95], [w * 0.15, h * 1.05]];
-    var tips = [], segs = [], spores = [];
-    origins.forEach(function (o) {
-      for (var k = 0; k < 9; k++) tips.push({ x: o[0], y: o[1], a: rnd() * Math.PI * 2, step: 0, life: (70 + rnd() * 60) * (wide ? 1 : 0.45), w: 1.6 });
-    });
-    var step = Math.max(4, Math.min(w, h) / 90), born = 0;
-    while (tips.length && segs.length < 2600) {
-      var next = [];
-      born++;
-      tips.forEach(function (p) {
-        p.a += (rnd() - 0.5) * 0.35;
-        var nx = p.x + Math.cos(p.a) * step, ny = p.y + Math.sin(p.a) * step;
-        segs.push({ x1: p.x, y1: p.y, x2: nx, y2: ny, t: born, w: p.w });
-        p.x = nx; p.y = ny; p.step++;
-        var out = nx < -40 || ny < -40 || nx > w + 40 || ny > h + 40;
-        if (p.step < p.life && !out) {
-          next.push(p);
-          if (rnd() < 0.06 && next.length < 260) {
-            next.push({ x: nx, y: ny, a: p.a + (rnd() < 0.5 ? -1 : 1) * (0.5 + rnd() * 0.5), step: 0, life: p.life * 0.55, w: Math.max(0.6, p.w * 0.7) });
-          }
-        } else if (!out && rnd() < 0.5) {
-          for (var s = 0; s < 4; s++) spores.push({ x: nx + Math.cos(p.a) * (s + 1) * 4, y: ny + Math.sin(p.a) * (s + 1) * 4, t: born + s + 2 });
-        }
-      });
-      tips = next;
-    }
-    hy.segs = segs; hy.spores = spores; hy.maxT = born + 6;
-  }
-  function drawHyphae(upTo) {
-    var c = $("#hyphae"); if (!c) return;
-    var ctx = c.getContext("2d"), cs = getComputedStyle(document.documentElement);
-    var line = cs.getPropertyValue("--hy").trim() || "#3aa774";
-    var spore = cs.getPropertyValue("--sun").trim() || "#f2bf3a";
-    ctx.clearRect(0, 0, c.width, c.height);
-    ctx.lineCap = "round";
-    ctx.strokeStyle = line;
-    ctx.globalAlpha = 0.38;
-    hy.segs.forEach(function (s) {
-      if (s.t > upTo) return;
-      ctx.lineWidth = s.w;
-      ctx.beginPath(); ctx.moveTo(s.x1, s.y1); ctx.lineTo(s.x2, s.y2); ctx.stroke();
-    });
-    ctx.globalAlpha = 0.95;
-    ctx.fillStyle = spore;
-    hy.spores.forEach(function (p) {
-      if (p.t > upTo) return;
-      ctx.beginPath(); ctx.arc(p.x, p.y, 1.8, 0, Math.PI * 2); ctx.fill();
-    });
-    ctx.globalAlpha = 1;
-  }
-  function setupHyphae(animate) {
-    var c = $("#hyphae"); if (!c || !c.getContext) return;
-    var r = c.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
-    if (!r.width || !r.height) return;
-    c.width = Math.round(r.width * dpr); c.height = Math.round(r.height * dpr);
-    c.getContext("2d").setTransform(dpr, 0, 0, dpr, 0, 0);
-    simulate(r.width, r.height);
-    cancelAnimationFrame(hy.raf);
-    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!animate || reduce) { drawHyphae(Infinity); return; }
-    var start = performance.now(), dur = 2600;
-    (function frame(now) {
-      var k = Math.min(1, (now - start) / dur);
-      var eased = 1 - Math.pow(1 - k, 3);
-      drawHyphae(eased * hy.maxT);
-      if (k < 1) hy.raf = requestAnimationFrame(frame);
-    })(start);
-  }
-  var resizeTimer;
-  window.addEventListener("resize", function () {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function () { setupHyphae(false); }, 150);
-  });
-  if (window.matchMedia) {
-    var mq = window.matchMedia("(prefers-color-scheme: dark)");
-    if (mq.addEventListener) mq.addEventListener("change", function () { drawHyphae(Infinity); });
-  }
-
   $("#lang-toggle").addEventListener("click", function () {
     lang = lang === "th" ? "en" : "th";
     try { localStorage.setItem("lab-lang", lang); } catch (e) {}
@@ -259,5 +173,5 @@
 
   load().then(function (d) { data = d; render(); }).catch(function () {
     $("#research-list").textContent = UI[lang].loadError;
-  }).then(function () { setupHyphae(true); });
+  });
 })();
