@@ -1,0 +1,46 @@
+[
+  {
+    "group": "pi",
+    "name": { "th": "ดร.ฉัตรสุดา จิรพันธ์ดา (ตรวจตัวสะกด)", "en": "Chatsuda Chirapanda, Ph.D." },
+    "role": { "th": "อาจารย์ ภาควิชาโรคพืช", "en": "Lecturer, Department of Plant Pathology" },
+    "note": { "th": "ชื่อเดิมในผลงาน: Sakdapetsiri", "en": "Also published as Sakdapetsiri" },
+    "photo": "",
+    "email": "",
+    "example": true
+  },
+  {
+    "group": "phd",
+    "name": { "th": "ชื่อนิสิตปริญญาเอก", "en": "PhD student name" },
+    "note": { "th": "หัวข้อวิจัยสั้น ๆ", "en": "Short research topic" },
+    "photo": "",
+    "example": true
+  },
+  {
+    "group": "ms",
+    "name": { "th": "ชื่อนิสิตปริญญาโท", "en": "MSc student name" },
+    "note": { "th": "การควบคุมโรคดอกไหม้ของกล้วยไม้มอคคาราโดยชีววิธี", "en": "Biocontrol of Mokara orchid flower blight" },
+    "photo": "",
+    "example": true
+  },
+  {
+    "group": "ms",
+    "name": { "th": "ชื่อนิสิตปริญญาโท", "en": "MSc student name" },
+    "note": { "th": "แบคทีเรียส่งเสริมการเจริญเติบโตจากรากหญ้าแฝก", "en": "Plant growth-promoting bacteria from vetiver roots" },
+    "photo": "",
+    "example": true
+  },
+  {
+    "group": "ug",
+    "name": { "th": "ชื่อนิสิตปริญญาตรี", "en": "Undergraduate name" },
+    "note": { "th": "ปัญหาพิเศษ", "en": "Senior project" },
+    "photo": "",
+    "example": true
+  },
+  {
+    "group": "alumni",
+    "name": { "th": "ชื่อศิษย์เก่า", "en": "Alumni name" },
+    "role": { "th": "วท.ม. 2567", "en": "MSc 2024" },
+    "note": { "th": "ปัจจุบันทำงานที่ ...", "en": "Now at ..." },
+    "example": true
+  }
+]

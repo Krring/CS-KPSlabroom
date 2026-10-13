@@ -1,0 +1,26 @@
+[
+  {
+    "title": { "th": "ระบุชนิดแบคทีเรียด้วยลำดับเบส 16S rRNA", "en": "Bacterial identification by 16S rRNA gene sequencing" },
+    "body": { "th": "สกัดดีเอ็นเอ เพิ่มปริมาณยีน 16S rRNA (16S ribosomal RNA) ส่งหาลำดับเบส และเทียบกับฐานข้อมูลอ้างอิง", "en": "DNA extraction, 16S ribosomal RNA gene amplification and sequencing, and comparison against type-strain databases." },
+    "sample": { "th": "เชื้อบริสุทธิ์บนจานอาหาร", "en": "Pure culture on a plate" },
+    "example": true
+  },
+  {
+    "title": { "th": "วิเคราะห์จีโนมแบคทีเรีย", "en": "Bacterial genome analysis" },
+    "body": { "th": "ประกอบจีโนม ระบุชนิดด้วยค่าความคล้ายของจีโนม และอธิบายหน้าที่ของยีนรวมถึงกลุ่มยีนสังเคราะห์สาร", "en": "Genome assembly, genome-based species identification, and annotation including biosynthetic gene clusters." },
+    "sample": { "th": "ไฟล์ข้อมูลลำดับเบส", "en": "Sequencing read files" },
+    "example": true
+  },
+  {
+    "title": { "th": "ทดสอบการยับยั้งเชื้อสาเหตุโรคพืช", "en": "Antagonism testing against plant pathogens" },
+    "body": { "th": "ทดสอบด้วยวิธี dual culture บนจานอาหาร และรายงานเปอร์เซ็นต์การยับยั้งการเจริญของเส้นใย", "en": "Dual-culture plate assays reporting percentage inhibition of mycelial growth." },
+    "sample": { "th": "เชื้อปฏิปักษ์และเชื้อสาเหตุโรค", "en": "Antagonist and pathogen cultures" },
+    "example": true
+  },
+  {
+    "title": { "th": "ทดสอบคุณสมบัติส่งเสริมการเจริญเติบโตของพืช", "en": "Plant growth-promoting trait assays" },
+    "body": { "th": "ตรวจการสร้าง IAA (Indole-3-acetic acid) ไซเดอโรฟอร์ และการละลายฟอสเฟต", "en": "Indole-3-acetic acid (IAA) production, siderophore production, and phosphate solubilisation." },
+    "sample": { "th": "เชื้อบริสุทธิ์", "en": "Pure culture" },
+    "example": true
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-10-01",
+    "title": { "th": "ตัวอย่างข่าว: เปิดรับนิสิตปริญญาโท ภาคปลาย 2569", "en": "Example: MSc positions open for the second semester" },
+    "body": { "th": "แก้ไขหรือลบรายการนี้ใน data/news.json", "en": "Edit or remove this entry in data/news.json" },
+    "example": true
+  },
+  {
+    "date": "2026-08-15",
+    "title": { "th": "ตัวอย่างข่าว: นิสิตนำเสนอผลงานในการประชุมวิชาการ", "en": "Example: Students present at a national conference" },
+    "body": { "th": "ข่าวใหม่ใส่ไว้บนสุดของไฟล์", "en": "Put new items at the top of the file" },
+    "example": true
+  }
+]

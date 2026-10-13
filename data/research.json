@@ -1,0 +1,37 @@
+[
+  {
+    "title": { "th": "การจัดจำแนกและระบบวิทยาของแบคทีเรีย", "en": "Bacterial taxonomy and systematics" },
+    "body": {
+      "th": "ระบุและบรรยายแบคทีเรียสายพันธุ์ใหม่ด้วยข้อมูลจีโนม ลักษณะทางสรีรวิทยา และเคมีอนุกรมวิธาน",
+      "en": "Identifying and describing new bacterial species from genome data, physiology, and chemotaxonomy."
+    }
+  },
+  {
+    "title": { "th": "การควบคุมโรคพืชโดยชีววิธี", "en": "Biological control of plant diseases" },
+    "body": {
+      "th": "คัดเลือกแอคติโนแบคทีเรียและแบคทีเรียปฏิปักษ์ที่ยับยั้งเชื้อสาเหตุโรค ส่งเสริมการเจริญเติบโต และกระตุ้นความต้านทานในพืช",
+      "en": "Screening actinobacteria and antagonistic bacteria that suppress pathogens, promote plant growth, and induce resistance in plants."
+    }
+  },
+  {
+    "title": { "th": "การค้นหายีนและสารทุติยภูมิจากจีโนม", "en": "Genome mining and secondary metabolites" },
+    "body": {
+      "th": "ค้นหากลุ่มยีนสังเคราะห์สารออกฤทธิ์ในจีโนมแบคทีเรีย เพื่อหาสารต้านจุลินทรีย์และสารชีวภัณฑ์ใหม่",
+      "en": "Searching bacterial genomes for biosynthetic gene clusters that point to new antimicrobials and bioproducts."
+    }
+  },
+  {
+    "title": { "th": "ไมโครไบโอมและชีวสารสนเทศ", "en": "Microbiome analysis and bioinformatics" },
+    "body": {
+      "th": "ศึกษาประชาคมจุลินทรีย์ในรากและดินด้วยการหาลำดับเบส และพัฒนาขั้นตอนวิเคราะห์ข้อมูลจีโนม",
+      "en": "Profiling root and soil microbial communities by sequencing, and building genome analysis pipelines."
+    }
+  },
+  {
+    "title": { "th": "การย่อยสลายทางชีวภาพและการบำบัดด้วยจุลินทรีย์", "en": "Biodegradation and bioremediation" },
+    "body": {
+      "th": "คัดแยกแบคทีเรียที่ย่อยสลายพลาสติกชีวภาพและสารตกค้าง และติดตามการเปลี่ยนแปลงของประชาคมระหว่างการเลี้ยง",
+      "en": "Isolating bacteria that break down bioplastics and residues, and tracking how communities shift during enrichment."
+    }
+  }
+]

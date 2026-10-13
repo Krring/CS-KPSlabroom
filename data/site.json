@@ -1,0 +1,42 @@
+{
+  "_note": "ข้อมูลทั่วไปของแล็บ แก้ข้อความในเครื่องหมาย \" \" ได้เลย ทุกช่องมีภาษาไทย (th) และอังกฤษ (en)",
+  "labName": {
+    "th": "ห้องปฏิบัติการชีวนิเวศของแบคทีเรียและการควบคุมโรคพืชโดยชีววิธี",
+    "en": "Laboratory of Bacterial Ecology and Biological Control of Plant Diseases"
+  },
+  "heroLines": {
+    "_note": "ชื่อแล็บบนหน้าแรก แบ่งเป็นท่อน เพื่อไม่ให้ตัดคำกลางคำ",
+    "th": [
+      "ห้องปฏิบัติการ",
+      "ชีวนิเวศของแบคทีเรีย",
+      "และการควบคุมโรคพืช",
+      "โดยชีววิธี"
+    ],
+    "en": [
+      "Laboratory of",
+      "Bacterial Ecology",
+      "and Biological Control",
+      "of Plant Diseases"
+    ]
+  },
+  "department": {
+    "th": "ภาควิชาโรคพืช คณะเกษตร กำแพงแสน มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน",
+    "en": "Department of Plant Pathology, Faculty of Agriculture at Kamphaeng Saen, Kasetsart University"
+  },
+  "tagline": {
+    "th": "เราศึกษาแบคทีเรียที่อยู่ร่วมกับพืช ตั้งแต่การจัดจำแนกชนิด การอ่าน⁠จี⁠โนม ไปจนถึงการนำมาใช้ควบคุมโรคพืชและส่งเสริมการเจริญเติบโต",
+    "en": "We study the bacteria that live with plants, from naming and classifying them and reading their genomes to putting them to work against plant disease and for plant growth."
+  },
+  "address": {
+    "th": "ภาควิชาโรคพืช คณะเกษตร กำแพงแสน มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน ต.กำแพงแสน อ.กำแพงแสน จ.นครปฐม 73140",
+    "en": "Department of Plant Pathology, Faculty of Agriculture at Kamphaeng Saen, Kasetsart University, Kamphaeng Saen, Nakhon Pathom 73140, Thailand"
+  },
+  "email": "ใส่อีเมลแล็บที่นี่ (เช่น ...@ku.th)",
+  "phone": "",
+  "bookingUrl": "https://calendar.app.google/ใส่ลิงก์หน้าจองนัดจาก-Google-Calendar",
+  "membersPortalUrl": "https://sites.google.com/ใส่ลิงก์-Google-Sites-คลังความรู้",
+  "joinText": {
+    "th": "เรารับนิสิตปริญญาโทและปริญญาเอกที่สนใจจุลชีววิทยาของพืช ชีวสารสนเทศ หรือการควบคุมโรคพืชโดยชีววิธี ส่งอีเมลแนะนำตัว ประวัติย่อ และหัวข้อที่สนใจมาได้",
+    "en": "We welcome master's and doctoral students interested in plant microbiology, bioinformatics, or biological control. Email a short introduction, your CV, and the topics you would like to work on."
+  }
+}
