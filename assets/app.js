@@ -18,7 +18,7 @@
       "group.phd": "นิสิตปริญญาเอก", "group.ms": "นิสิตปริญญาโท",
       "group.ug": "นิสิตปริญญาตรี", "group.staff": "เจ้าหน้าที่", "group.alumni": "ศิษย์เก่า",
       "lvl.postdoc": "นักวิจัยหลังปริญญาเอก", "lvl.phd": "ป.เอก", "lvl.ms": "ป.โท", "lvl.ug": "ป.ตรี", "lvl.staff": "เจ้าหน้าที่",
-      "kicker": "ภาควิชาโรคพืช มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน",
+      "kicker": "ภาควิชาโรคพืช คณะเกษตร กำแพงแสน มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน",
       "short": "แล็บชีวนิเวศแบคทีเรียและชีววิธี",
       "example": "ตัวอย่าง", "empty": "ยังไม่มีรายการ", "loadError": "โหลดข้อมูลไม่สำเร็จ ตรวจรูปแบบไฟล์ในโฟลเดอร์ data/"
     },
@@ -38,7 +38,7 @@
       "group.phd": "PhD students", "group.ms": "MSc students",
       "group.ug": "Undergraduate students", "group.staff": "Staff", "group.alumni": "Alumni",
       "lvl.postdoc": "Postdoc", "lvl.phd": "PhD", "lvl.ms": "MSc", "lvl.ug": "BSc", "lvl.staff": "Staff",
-      "kicker": "Department of Plant Pathology, Kasetsart University, Kamphaeng Saen",
+      "kicker": "Department of Plant Pathology, Faculty of Agriculture at Kamphaeng Saen, Kasetsart University, Kamphaeng Saen Campus",
       "short": "Microbiome & Biocontrol Lab",
       "example": "Example", "empty": "Nothing here yet", "loadError": "Could not load data. Check the file format in the data/ folder"
     }
@@ -106,7 +106,7 @@
     });
     var lines = s.heroLines && s.heroLines[lang];
     if (lines && lines.length) {
-      $(".hero h1").innerHTML = lines.map(function (l) { return '<span class="nb">' + esc(l) + "</span>"; }).join(" ");
+      $(".hero h1").innerHTML = lines.map(function (l) { return '<span class="nb">' + esc(l) + "</span>"; }).join(lang === "th" ? "<wbr>" : " ");
     }
     [["#portal-link", s.membersPortalUrl], ["#booking-link", s.bookingUrl]].forEach(function (p) {
       $(p[0]).href = isPlaceholder(p[1]) ? "#contact" : p[1];

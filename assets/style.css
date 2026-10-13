@@ -84,10 +84,10 @@ nav a:hover { color: var(--ink); }
   border-radius: 0 0 var(--r-lg) var(--r-lg);
   background: var(--moss); color: var(--on-moss);
 }
-.hero-inner { max-width: 48rem; display: grid; gap: 1.1rem; }
-.kicker { color: var(--accent-ink); font-size: 0.95rem; letter-spacing: 0.04em; }
+.hero-inner { max-width: 56rem; display: grid; gap: 1.1rem; }
+.kicker { color: var(--accent-ink); font-size: 0.95rem; }
 .hero h1 { font-size: clamp(2rem, 4.3vw, 3.25rem); font-weight: 300; line-height: 1.25; letter-spacing: -0.005em; }
-.hero h1 .nb { display: inline-block; white-space: nowrap; margin-right: 0.2em; }
+.hero h1 .nb { white-space: nowrap; }
 .tagline { font-size: clamp(1.05rem, 1.7vw, 1.2rem); font-weight: 300; max-width: 40rem; color: color-mix(in srgb, var(--on-moss) 78%, transparent); }
 .cta { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.4rem; }
 
