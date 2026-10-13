@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact | Microbiome and Biocontrol Lab</title>
+<meta name="description" content="ห้องปฏิบัติการชีวนิเวศของแบคทีเรียและการควบคุมเชื้อสาเหตุโรคพืชโดยชีววิธี ภาควิชาโรคพืช มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/style.css?v=20">
+</head>
+<body>
+<header class="top">
+  <div class="bar">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span><span data-bind="labShort">Microbiome and Biocontrol Laboratory</span></a>
+    <nav aria-label="Sections">
+      <a href="index.html#research" data-i18n="nav.research">งานวิจัย</a>
+      <a href="index.html#members" data-i18n="nav.members">สมาชิก</a>
+      <a href="publications.html" data-i18n="nav.publications">ผลงานตีพิมพ์</a>
+      <a href="index.html#services" data-i18n="nav.services">บริการ</a>
+      <a href="index.html#news" data-i18n="nav.news">ข่าว</a>
+      <a href="contact.html" aria-current="page" data-i18n="nav.contact">ติดต่อ</a>
+    </nav>
+    <div class="actions">
+      <a class="pill ghost" id="portal-link" href="#" target="_blank" rel="noopener" data-i18n="nav.portal">สำหรับสมาชิกแล็บ</a>
+      <button class="pill lang" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="sub" id="contact-page">
+  <section class="block page-head">
+    <a class="back" href="index.html" data-i18n="pubs.back">กลับหน้าแรก</a>
+    <div class="head">
+      <h1 data-i18n="ct.title">ติดต่อและนัดพบอาจารย์</h1>
+      <p data-i18n="ct.lead"></p>
+    </div>
+
+    <div class="ways">
+      <article class="way">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27V12l11-7 11 7v15H5Z"/><path d="M12 27v-8h8v8"/></svg>
+        <h3 data-i18n="ct.inperson">พบที่ห้องปฏิบัติการ</h3>
+        <p data-i18n="ct.inpersonBody"></p>
+        <a class="pill ghost small" href="#booking" data-i18n="ct.calTitle">ตารางเวลาว่าง</a>
+      </article>
+      <article class="way">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="8" width="17" height="16" rx="3"/><path d="m21 14 7-4v12l-7-4"/></svg>
+        <h3 data-i18n="ct.online">ประชุมออนไลน์</h3>
+        <p data-i18n="ct.onlineBody"></p>
+        <a class="pill ghost small" href="#booking" data-i18n="ct.calTitle">ตารางเวลาว่าง</a>
+      </article>
+      <article class="way">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="7" width="24" height="18" rx="3"/><path d="m5 9 11 8 11-8"/></svg>
+        <h3 data-i18n="ct.email">ส่งอีเมล</h3>
+        <p data-i18n="ct.emailBody"></p>
+        <p class="addr" id="ct-email"></p>
+        <div class="row">
+          <button class="pill ghost small" id="ct-copy" type="button" data-i18n="ct.copy">คัดลอกอีเมล</button>
+          <a class="pill ghost small" id="ct-mail" href="#" data-i18n="ct.writeMail">เขียนอีเมล</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="booking-layout" id="booking">
+      <div class="booking-main">
+        <div class="booking-head">
+          <div>
+            <h2 data-i18n="ct.calTitle">ตารางเวลาว่าง</h2>
+            <p data-i18n="ct.calBody"></p>
+          </div>
+          <a class="pill ghost small" id="booking-open" href="#" target="_blank" rel="noopener" hidden data-i18n="ct.openNew">เปิดในหน้าต่างใหม่</a>
+        </div>
+        <div class="booking-box" id="booking-box"></div>
+      </div>
+      <aside class="booking-side">
+        <h3 data-i18n="ct.prepTitle">ก่อนมาพบ</h3>
+        <ul>
+          <li data-i18n="ct.prep1"></li>
+          <li data-i18n="ct.prep2"></li>
+          <li data-i18n="ct.prep3"></li>
+        </ul>
+        <h3 data-i18n="ct.where">ที่ตั้ง</h3>
+        <p data-bind="address"></p>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span data-bind="labName"></span>
+  <span data-bind="department"></span>
+</footer>
+
+<script src="assets/app.js?v=20"></script>
+</body>
+</html>

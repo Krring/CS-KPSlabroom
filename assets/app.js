@@ -14,6 +14,16 @@
       "svc.sample": "ตัวอย่างที่ส่ง",
       "contact.address": "ที่อยู่", "contact.email": "อีเมล",
       "contact.joinTitle": "มาทำวิจัยด้วยกัน", "contact.book": "นัดพบอาจารย์",
+      "ct.title": "ติดต่อและนัดพบอาจารย์", "ct.lead": "เลือกช่องทางที่สะดวก ถ้าต้องการพบตัวต่อตัวหรือคุยออนไลน์ ให้จองเวลาจากปฏิทินด้านล่าง ระบบจะส่งอีเมลยืนยันให้ทันที",
+      "ct.inperson": "พบที่ห้องปฏิบัติการ", "ct.inpersonBody": "คุยเรื่องงานวิจัย วิทยานิพนธ์ หรือดูการทดลอง จองเวลาก่อนทุกครั้ง อาจารย์อาจอยู่สอนหรือลงแปลง",
+      "ct.online": "ประชุมออนไลน์", "ct.onlineBody": "เลือกช่วงเวลาที่มีป้ายออนไลน์ในปฏิทิน ลิงก์ Google Meet จะอยู่ในอีเมลยืนยัน",
+      "ct.email": "ส่งอีเมล", "ct.emailBody": "เหมาะกับคำถามสั้น ๆ ส่งไฟล์ หรือนัดล่วงหน้านาน ๆ อาจารย์ตอบในวันทำการ",
+      "ct.copy": "คัดลอกอีเมล", "ct.copied": "คัดลอกแล้ว", "ct.writeMail": "เขียนอีเมล", "ct.mailSubject": "[นัดพบอาจารย์] ",
+      "ct.calTitle": "ตารางเวลาว่าง", "ct.calBody": "ช่องที่แสดงคือเวลาที่ว่างจริงตามปฏิทินของอาจารย์ เลือกเวลา กรอกชื่อ อีเมล และเรื่องที่ต้องการคุย",
+      "ct.openCal": "เปิดปฏิทินจองนัด", "ct.openNew": "เปิดในหน้าต่างใหม่",
+      "ct.soonTitle": "กำลังเปิดตารางนัดออนไลน์", "ct.soonBody": "ระหว่างนี้ส่งอีเมลเพื่อขอนัดได้ โปรดระบุเรื่องที่ต้องการคุยและวันเวลาที่สะดวกสองถึงสามช่วง",
+      "ct.prepTitle": "ก่อนมาพบ", "ct.prep1": "บอกหัวข้อที่ต้องการคุยตอนจอง จะได้ใช้เวลาได้เต็มที่", "ct.prep2": "แนบไฟล์ที่เกี่ยวข้องมาก่อนอย่างน้อยหนึ่งวัน เช่น ร่างบท ผลการทดลอง", "ct.prep3": "ถ้าไม่สะดวกตามนัด ยกเลิกหรือเลื่อนจากลิงก์ในอีเมลยืนยัน",
+      "ct.where": "ที่ตั้ง",
       "group.pi": "หัวหน้าห้องปฏิบัติการ", "group.postdoc": "นักวิจัยหลังปริญญาเอก",
       "group.phd": "นิสิตปริญญาเอก", "group.ms": "นิสิตปริญญาโท",
       "group.ug": "นิสิตปริญญาตรี", "group.staff": "เจ้าหน้าที่", "group.alumni": "ศิษย์เก่า",
@@ -34,6 +44,16 @@
       "svc.sample": "Send",
       "contact.address": "Address", "contact.email": "Email",
       "contact.joinTitle": "Do research with us", "contact.book": "Book a meeting",
+      "ct.title": "Contact and appointments", "ct.lead": "Pick whatever works for you. To meet in person or online, book a time in the calendar below and you will get a confirmation email right away.",
+      "ct.inperson": "Meet at the lab", "ct.inpersonBody": "For research, thesis work, or to see an experiment. Please always book first; the PI may be teaching or in the field.",
+      "ct.online": "Online meeting", "ct.onlineBody": "Choose a slot marked online. The Google Meet link is in your confirmation email.",
+      "ct.email": "Email", "ct.emailBody": "Best for quick questions, sending files, or arranging a meeting far ahead. Replies on working days.",
+      "ct.copy": "Copy email", "ct.copied": "Copied", "ct.writeMail": "Write an email", "ct.mailSubject": "[Meeting request] ",
+      "ct.calTitle": "Available times", "ct.calBody": "Slots shown are real free times from the PI's calendar. Pick one, then enter your name, email, and what you would like to discuss.",
+      "ct.openCal": "Open booking calendar", "ct.openNew": "Open in a new window",
+      "ct.soonTitle": "Online booking opens soon", "ct.soonBody": "Meanwhile, email to request a meeting. Please include the topic and two or three times that suit you.",
+      "ct.prepTitle": "Before you come", "ct.prep1": "Say what you want to discuss when you book, so the time is well used.", "ct.prep2": "Send related files at least a day ahead, such as a draft chapter or results.", "ct.prep3": "If you cannot make it, cancel or reschedule from the link in your confirmation email.",
+      "ct.where": "Location",
       "group.pi": "Principal investigator", "group.postdoc": "Postdoctoral researchers",
       "group.phd": "Ph.D. students", "group.ms": "M.Sc. students",
       "group.ug": "Undergraduate students", "group.staff": "Staff", "group.alumni": "Alumni",
@@ -120,12 +140,11 @@
     if (lines && lines.length && $(".hero h1")) {
       $(".hero h1").innerHTML = lines.map(function (l) { return '<span class="nb">' + esc(l) + "</span>"; }).join(lang === "th" ? "<wbr>" : " ");
     }
-    [["#portal-link", s.membersPortalUrl], ["#booking-link", s.bookingUrl]].forEach(function (p) {
-      var el = $(p[0]); if (!el) return;
-      el.href = isPlaceholder(p[1]) ? (HOME ? "#contact" : "index.html#contact") : p[1];
-    });
+    var portal = $("#portal-link");
+    if (portal) portal.href = isPlaceholder(s.membersPortalUrl) ? "contact.html" : s.membersPortalUrl;
 
-    if (!HOME) { renderFull(); return; }
+    if ($("#pub-full")) { renderFull(); return; }
+    if ($("#contact-page")) { renderContact(); return; }
     $("#research-list").innerHTML = data.research.map(function (r, i) {
       return '<article class="tile"><svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
         GLYPHS[i % GLYPHS.length] + "</svg><h3>" + esc(t(r.title)) + "</h3><p>" + rich(t(r.body)) + "</p></article>";
@@ -182,6 +201,29 @@
     }).join("") : "<p>" + ui.empty + "</p>";
   }
 
+  function renderContact() {
+    var ui = UI[lang], s = data.site;
+    var embed = s.bookingEmbedUrl && !isPlaceholder(s.bookingEmbedUrl) ? s.bookingEmbedUrl : "";
+    var link = s.bookingUrl && !isPlaceholder(s.bookingUrl) ? s.bookingUrl : "";
+    var box = $("#booking-box");
+    var key = embed + "|" + link;
+    if (box.getAttribute("data-key") !== key) {
+      box.setAttribute("data-key", key);
+      if (embed) {
+        box.innerHTML = '<iframe src="' + esc(embed) + '" title="Booking calendar" loading="lazy"></iframe>';
+      } else {
+        box.innerHTML = '<div class="booking-empty"><p class="t" data-i18n="ct.soonTitle"></p><p data-i18n="ct.soonBody"></p>' +
+          (link ? '<a class="pill solid" href="' + esc(link) + '" target="_blank" rel="noopener" data-i18n="ct.openCal"></a>' : "") + "</div>";
+      }
+    }
+    box.querySelectorAll("[data-i18n]").forEach(function (el) { el.textContent = ui[el.getAttribute("data-i18n")] || ""; });
+    var open = $("#booking-open");
+    if (open) { open.hidden = !link; if (link) open.href = link; }
+    $("#ct-email").textContent = s.email;
+    var mail = $("#ct-mail");
+    mail.href = "mailto:" + s.email + "?subject=" + encodeURIComponent(ui["ct.mailSubject"]);
+  }
+
   var ME = /\b(Sakdapetsiri C|Chirapanda C)\b/g;
   function sortedPubs() {
     return data.publications.slice().sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
@@ -222,6 +264,20 @@
         g.items.map(pubItem).join("") + "</ol></section>";
     }).join("") : '<p class="empty">' + ui["pubs.none"] + "</p>";
   }
+  function wireCopy() {
+    var btn = $("#ct-copy"); if (!btn) return;
+    btn.addEventListener("click", function () {
+      var txt = $("#ct-email").textContent;
+      function done() { btn.textContent = UI[lang]["ct.copied"]; setTimeout(function () { btn.textContent = UI[lang]["ct.copy"]; }, 1800); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).then(done, function () { selectEmail(); });
+      } else { selectEmail(); }
+    });
+    function selectEmail() {
+      var r = document.createRange(); r.selectNodeContents($("#ct-email"));
+      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    }
+  }
   function wireFilters() {
     var fromSel = $("#yr-from"), toSel = $("#yr-to");
     if (!fromSel) return;
@@ -248,7 +304,7 @@
     if (data) render();
   });
 
-  load().then(function (d) { data = d; render(); wireFilters(); }).catch(function (e) {
+  load().then(function (d) { data = d; render(); wireFilters(); wireCopy(); }).catch(function (e) {
     var target = $("#research-list") || $("#pub-full");
     if (target) target.textContent = UI[lang].loadError;
     if (window.console) console.error(e);
