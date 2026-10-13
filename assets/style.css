@@ -112,7 +112,7 @@ main > .block { max-width: 76rem; margin-inline: auto; padding-block: clamp(1.75
 .pi-card .avatar { width: 168px; height: 168px; font-size: 3.4rem; margin: 0; }
 .pi-card .eyebrow { color: var(--accent-ink); font-size: 0.93rem; }
 .pi-card .name { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 300; line-height: 1.35; }
-.people { display: grid; grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr)); gap: 2.5rem 1.75rem; }
+.people { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 2.5rem 1.75rem; }
 .person { display: grid; gap: 0.2rem; justify-items: start; align-content: start; }
 .avatar { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; margin-bottom: 0.9rem; background: var(--surface); display: grid; place-items: center; font-size: 2.2rem; font-weight: 300; color: var(--accent-ink); }
 .person .name { font-weight: 500; font-size: 1.05rem; line-height: 1.5; }
