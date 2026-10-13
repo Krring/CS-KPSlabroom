@@ -132,7 +132,8 @@
     if (current.length) {
       html += '<div class="people">' + current.map(function (m) {
         return '<div class="person">' + avatar(m) + '<div class="name">' + esc(t(m.name)) + badge(m) + "</div>" +
-          '<span class="level">' + (ui["lvl." + m.group] || esc(t(m.role))) + "</span>" +
+          '<div class="chips"><span class="level">' + (ui["lvl." + m.group] || esc(t(m.role))) + "</span>" +
+          (t(m.scholarship) ? '<span class="level award">' + esc(t(m.scholarship)) + "</span>" : "") + "</div>" +
           (t(m.note) ? '<div class="note"><span class="lbl">' + ui.topic + "</span> " + rich(t(m.note)) + "</div>" : "") + "</div>";
       }).join("") + "</div>";
     }
