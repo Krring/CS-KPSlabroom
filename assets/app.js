@@ -9,7 +9,7 @@
       "nav.portal": "สำหรับสมาชิกแล็บ",
       "kb.title": "คลังความรู้สำหรับสมาชิกแล็บ", "kb.lead": "คู่มือการทำงานในแล็บ แยกตามหมวด กดชื่อเรื่องเพื่อเปิดเอกสาร",
       "kb.accessTitle": "เปิดได้เฉพาะสมาชิกแล็บ", "kb.accessBody": "เอกสารเปิดได้เฉพาะบัญชี Google ที่อาจารย์เพิ่มสิทธิ์ให้ ถ้าเปิดแล้วเจอหน้าขอสิทธิ์เข้าถึง ให้ตรวจว่าเข้าสู่ระบบด้วยบัญชีที่แจ้งอาจารย์ไว้ หรือติดต่ออาจารย์",
-      "kb.soon": "กำลังจัดทำ", "kb.n": "{n} เรื่อง", "kb.folder": "เปิดโฟลเดอร์ทั้งหมดใน Google Drive",
+      "kb.soon": "กำลังจัดทำ", "kb.n": "{n} เรื่อง", "kb.searchLabel": "ค้นหาในคลังความรู้", "kb.placeholder": "ค้นหา เช่น autoclave, กลีเซอรอล, เชื้อรา, Streptomyces", "kb.found": "พบ {n} เรื่องจาก \u201c{q}\u201d", "kb.total": "ทั้งหมด {n} เรื่อง ใน {c} หมวด", "kb.noneTitle": "ไม่พบเรื่องที่ค้นหา", "kb.noneBody": "ลองคำอื่น ใช้คำสั้นลง หรือค้นเป็นภาษาอังกฤษ ถ้าหัวข้อที่ต้องการยังไม่มีในคลังความรู้ แจ้งอาจารย์ได้", "kb.clear": "ล้างคำค้น", "kb.folder": "เปิดโฟลเดอร์ทั้งหมดใน Google Drive",
       "hero.join": "สนใจเข้าร่วมแล็บ", "hero.research": "ดูงานวิจัยของเรา",
       "research.lead": "ห้าแนวทางที่แล็บทำอยู่ ตั้งแต่ระดับยีนไปจนถึงในแปลงปลูก",
       "pubs.note": "รายการเต็มดูได้ที่", "pubs.all": "ดูผลงานทั้งหมด {n} เรื่อง", "pubs.count": "แสดง {n} จาก {total} เรื่อง", "pubs.n": "{n} เรื่อง", "pubs.none": "ไม่มีผลงานในช่วงปีที่เลือก", "pubs.from": "ตั้งแต่ปี", "pubs.to": "ถึงปี", "pubs.allYears": "ทุกปี", "pubs.last3": "3 ปีล่าสุด", "pubs.last5": "5 ปีล่าสุด", "pubs.back": "กลับหน้าแรก", "pubs.lead": "ผลงานตีพิมพ์ทั้งหมด เรียงจากใหม่ไปเก่า ชื่อของอาจารย์เป็นตัวหนา",
@@ -47,7 +47,7 @@
       "nav.portal": "Lab members",
       "kb.title": "Knowledge base for lab members", "kb.lead": "Lab guides grouped by topic. Select a title to open the document.",
       "kb.accessTitle": "Lab members only", "kb.accessBody": "Documents open only for Google accounts the PI has granted access. If you see an access request page, check that you are signed in with the account you gave the PI, or contact the PI.",
-      "kb.soon": "In preparation", "kb.n": "{n} topics", "kb.folder": "Open the full folder in Google Drive",
+      "kb.soon": "In preparation", "kb.n": "{n} topics", "kb.searchLabel": "Search the knowledge base", "kb.placeholder": "Search, e.g. autoclave, glycerol, fungi, Streptomyces", "kb.found": "{n} found for \u201c{q}\u201d", "kb.total": "{n} topics in {c} categories", "kb.noneTitle": "Nothing matches your search", "kb.noneBody": "Try another word, a shorter word, or Thai. If the topic is not in the knowledge base yet, let the PI know.", "kb.clear": "Clear search", "kb.folder": "Open the full folder in Google Drive",
       "hero.join": "Join the lab", "hero.research": "See our research",
       "research.lead": "Five lines of work, from genes in a genome to plants in the field",
       "pubs.note": "Full list on", "pubs.all": "See all {n} publications", "pubs.count": "Showing {n} of {total}", "pubs.n": "{n} papers", "pubs.none": "No publications in the selected years", "pubs.from": "From", "pubs.to": "To", "pubs.allYears": "All years", "pubs.last3": "Last 3 years", "pubs.last5": "Last 5 years", "pubs.back": "Back to home", "pubs.lead": "All publications, newest first. The PI's name is in bold.",
@@ -245,19 +245,54 @@
     dna: '<path d="M10 4c0 8 12 8 12 16s-12 4-12 8M22 4c0 8-12 8-12 16s12 4 12 8"/><path d="M12 10h8M12 22h8"/>',
     study: '<path d="M4 8l12-4 12 4-12 4-12-4Z"/><path d="M9 10v7c0 2 3 4 7 4s7-2 7-4v-7M28 8v9"/>'
   };
+  function kbNorm(x) { return String(x || "").toLowerCase().replace(/[−–—]/g, "-").replace(/\s+/g, " ").trim(); }
+  function kbText(it) {
+    var tt = it.title || {}, dd = it.desc || {};
+    return kbNorm([tt.th, tt.en, dd.th, dd.en, it.keywords].join(" ").replace(/\*/g, ""));
+  }
+  var kbWired = false;
   function renderKb() {
-    var ui = UI[lang], kb = data.kb;
-    $("#kb-list").innerHTML = kb.categories.map(function (c) {
-      return '<article class="kb-cat"><div class="kb-top"><svg viewBox="0 0 32 32" aria-hidden="true">' + (KB_ICONS[c.icon] || KB_ICONS.tech) +
-        "</svg><div><h2>" + esc(t(c.title)) + '</h2><span class="kb-n">' + ui["kb.n"].replace("{n}", c.items.length) + "</span></div></div><ul>" +
-        c.items.map(function (it) {
+    var ui = UI[lang], kb = data.kb, input = $("#kb-q");
+    input.placeholder = ui["kb.placeholder"];
+    var q = kbNorm(input.value), words = q ? q.split(" ") : [];
+    var found = 0, shownCats = 0, total = 0;
+    var cats = kb.categories.map(function (c, ci) {
+      total += c.items.length;
+      var hits = c.items.filter(function (it) {
+        if (!words.length) return true;
+        var txt = kbText(it);
+        return words.every(function (w) { return txt.indexOf(w) !== -1; });
+      });
+      found += hits.length;
+      if (!hits.length) return "";
+      shownCats++;
+      return '<article class="kb-cat" id="kb-cat-' + ci + '"><div class="kb-top"><svg viewBox="0 0 32 32" aria-hidden="true">' + (KB_ICONS[c.icon] || KB_ICONS.tech) +
+        "</svg><div><h2>" + esc(t(c.title)) + '</h2><span class="kb-n">' + ui["kb.n"].replace("{n}", words.length ? hits.length : c.items.length) + "</span></div></div><ul>" +
+        hits.map(function (it) {
+          var desc = t(it.desc) ? '<small>' + rich(t(it.desc)) + "</small>" : "";
           return it.url && !isPlaceholder(it.url)
-            ? '<li><a href="' + esc(it.url) + '" target="_blank" rel="noopener"><span>' + rich(t(it.title)) + "</span></a></li>"
-            : '<li class="soon"><span>' + rich(t(it.title)) + '</span><span class="tag">' + ui["kb.soon"] + "</span></li>";
+            ? '<li><a href="' + esc(it.url) + '" target="_blank" rel="noopener"><span>' + rich(t(it.title)) + desc + "</span></a></li>"
+            : '<li class="soon"><span>' + rich(t(it.title)) + desc + '</span><span class="tag">' + ui["kb.soon"] + "</span></li>";
         }).join("") + "</ul></article>";
+    });
+    $("#kb-list").innerHTML = cats.join("");
+    $("#kb-empty").hidden = found > 0;
+    $("#kb-count").innerHTML = words.length
+      ? esc(ui["kb.found"].replace("{n}", found).replace("{q}", input.value.trim())) + ' <button type="button" class="kb-clear" id="kb-clear">' + ui["kb.clear"] + "</button>"
+      : esc(ui["kb.total"].replace("{n}", total).replace("{c}", kb.categories.length));
+    var clear = $("#kb-clear");
+    if (clear) clear.addEventListener("click", function () { input.value = ""; renderKb(); input.focus(); });
+    $("#kb-jump").hidden = words.length > 0;
+    $("#kb-jump").innerHTML = kb.categories.map(function (c, ci) {
+      return '<a class="pill ghost small" href="#kb-cat-' + ci + '">' + esc(t(c.title)) + "</a>";
     }).join("");
     var f = $("#kb-folder");
     if (f) { f.hidden = !kb.folderUrl; f.href = kb.folderUrl || "#"; }
+    if (!kbWired) {
+      kbWired = true;
+      try { var p = new URLSearchParams(location.search).get("q"); if (p && !input.value) { input.value = p; renderKb(); } } catch (e) {}
+      input.addEventListener("input", renderKb);
+    }
   }
 
   var ME = /\b(Sakdapetsiri C|Chirapanda C)\b/g;

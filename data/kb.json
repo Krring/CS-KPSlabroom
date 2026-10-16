@@ -1,63 +1,268 @@
 {
-  "_note": "คลังความรู้สำหรับสมาชิกแล็บ แต่ละเรื่องใส่ url ของ Google Docs ถ้ายังไม่มีเอกสาร ให้ใส่ \"url\": \"\" เว็บจะแสดงว่ากำลังจัดทำ",
+  "_note": "คลังความรู้สำหรับสมาชิกแล็บ แต่ละเรื่องใส่ url ของ Google Docs ถ้ายังไม่มีเอกสาร ให้ใส่ \"url\": \"\" เว็บจะแสดงว่ากำลังจัดทำ ช่อง keywords คือคำค้นเพิ่มเติม (ไม่แสดงบนหน้าเว็บ) ช่อง desc คือคำอธิบายสั้นใต้ชื่อเรื่อง",
   "folderUrl": "https://drive.google.com/drive/folders/1TwhI6e1HN8alf_GFsj2TVahCyDpvNiag",
   "categories": [
     {
       "icon": "start",
-      "title": { "th": "เริ่มต้นในแล็บ", "en": "Getting started" },
+      "title": {
+        "th": "เริ่มต้นในแล็บ",
+        "en": "Getting started"
+      },
       "items": [
-        { "title": { "th": "กฎและความปลอดภัยในห้องปฏิบัติการ", "en": "Laboratory rules and safety" }, "url": "https://docs.google.com/document/d/1obn_AGI-chxz1PhUXSQnDvUP7sQTbXeYBVRgrAWRY0w/edit" },
-        { "title": { "th": "การจองและใช้เครื่องมือ", "en": "Booking and using equipment" }, "url": "" },
-        { "title": { "th": "ตารางทำความสะอาดและหน้าที่เวร", "en": "Cleaning roster and duties" }, "url": "" }
+        {
+          "title": {
+            "th": "กฎและความปลอดภัยในห้องปฏิบัติการ",
+            "en": "Laboratory rules and safety"
+          },
+          "url": "https://docs.google.com/document/d/1obn_AGI-chxz1PhUXSQnDvUP7sQTbXeYBVRgrAWRY0w/edit",
+          "desc": {
+            "th": "ข้อห้าม อุปกรณ์ป้องกันส่วนบุคคล ของมีคม และการจัดการขยะติดเชื้อ",
+            "en": "Prohibited practices, protective equipment, sharps and infectious waste"
+          },
+          "keywords": "ความปลอดภัย safety biosafety BSL GMPP PPE ถุงมือ เสื้อคลุม ล้างมือ ปิเปต ของมีคม เข็ม แก้วแตก ขยะติดเชื้อ น้ำยาฆ่าเชื้อ กฎ"
+        },
+        {
+          "title": {
+            "th": "การจองและใช้เครื่องมือ",
+            "en": "Booking and using equipment"
+          },
+          "url": ""
+        },
+        {
+          "title": {
+            "th": "ตารางทำความสะอาดและหน้าที่เวร",
+            "en": "Cleaning roster and duties"
+          },
+          "url": ""
+        }
       ]
     },
     {
       "icon": "media",
-      "title": { "th": "อาหารเลี้ยงเชื้อ", "en": "Culture media" },
+      "title": {
+        "th": "อาหารเลี้ยงเชื้อ",
+        "en": "Culture media"
+      },
       "items": [
-        { "title": { "th": "NA (Nutrient Agar) และ NB (Nutrient Broth)", "en": "NA (Nutrient Agar) and NB (Nutrient Broth)" }, "url": "https://docs.google.com/document/d/1IDA-rYDpLNQve8kz8VoyYRVIDgYkGpPSdSQ3h1PXTTs/edit" },
-        { "title": { "th": "PDA (Potato Dextrose Agar)", "en": "PDA (Potato Dextrose Agar)" }, "url": "https://docs.google.com/document/d/10YFLfzKbveFJQ7z_MPXYMsyelh6skE8YzfJdVN7DkJg/edit" },
-        { "title": { "th": "ISP2 (International Streptomyces Project medium 2) สำหรับแอคติโนแบคทีเรีย", "en": "ISP2 (International Streptomyces Project medium 2) for actinobacteria" }, "url": "https://docs.google.com/document/d/19-HsScRpWHz-XoKGz4Wo8erHgdU76rUy2dzn5ZtkgNw/edit" },
-        { "title": { "th": "King's B สำหรับ *Pseudomonas*", "en": "King's B for *Pseudomonas*" }, "url": "https://docs.google.com/document/d/1X1f8xSv6KlVBYfTjSjYvJ3Aqki52h-O39UY5MZwF24s/edit" },
-        { "title": { "th": "อาหารทดสอบคุณสมบัติส่งเสริมการเจริญเติบโตของพืช: CAS (Chrome Azurol S), Pikovskaya, Aleksandrow และ ZnO agar", "en": "Plant growth-promotion test media: CAS (Chrome Azurol S), Pikovskaya, Aleksandrow and ZnO agar" }, "url": "https://docs.google.com/document/d/1bYejmzriQHoNV_IybdpPy0I73ZjOFTRGbHFhoX6L-5o/edit" },
-        { "title": { "th": "Carrot agar สำหรับ *Phytophthora*", "en": "Carrot agar for *Phytophthora*" }, "url": "https://docs.google.com/document/d/1kWxfg1ofmHVze-wT3_CCmVm_-nJhjTTs04eoMT6BwdE/edit" }
+        {
+          "title": {
+            "th": "NA (Nutrient Agar) และ NB (Nutrient Broth)",
+            "en": "NA (Nutrient Agar) and NB (Nutrient Broth)"
+          },
+          "url": "https://docs.google.com/document/d/1IDA-rYDpLNQve8kz8VoyYRVIDgYkGpPSdSQ3h1PXTTs/edit",
+          "desc": {
+            "th": "อาหารพื้นฐานสำหรับแบคทีเรียทั่วไป ทั้งอาหารแข็งและอาหารเหลว",
+            "en": "General medium for non-fastidious bacteria, solid and liquid"
+          },
+          "keywords": "แบคทีเรีย bacteria nutrient อาหารแข็ง อาหารเหลว broth beef extract peptone"
+        },
+        {
+          "title": {
+            "th": "PDA (Potato Dextrose Agar)",
+            "en": "PDA (Potato Dextrose Agar)"
+          },
+          "url": "https://docs.google.com/document/d/10YFLfzKbveFJQ7z_MPXYMsyelh6skE8YzfJdVN7DkJg/edit",
+          "desc": {
+            "th": "อาหารเลี้ยงเชื้อราและยีสต์ จากผงสำเร็จรูปหรือมันฝรั่งสด",
+            "en": "Medium for fungi and yeasts, from powder or fresh potato"
+          },
+          "keywords": "เชื้อรา ยีสต์ fungi fungus yeast มันฝรั่ง potato dextrose dual culture"
+        },
+        {
+          "title": {
+            "th": "ISP2 (International Streptomyces Project medium 2) สำหรับแอคติโนแบคทีเรีย",
+            "en": "ISP2 (International Streptomyces Project medium 2) for actinobacteria"
+          },
+          "url": "https://docs.google.com/document/d/19-HsScRpWHz-XoKGz4Wo8erHgdU76rUy2dzn5ZtkgNw/edit",
+          "desc": {
+            "th": "อาหารมาตรฐานสำหรับเลี้ยงแอคติโนแบคทีเรีย",
+            "en": "Standard medium for actinobacteria"
+          },
+          "keywords": "Streptomyces แอคติโนแบคทีเรีย actinobacteria actinomycetes yeast extract malt extract สปอร์ อนุกรมวิธาน"
+        },
+        {
+          "title": {
+            "th": "King's B สำหรับ *Pseudomonas*",
+            "en": "King's B for *Pseudomonas*"
+          },
+          "url": "https://docs.google.com/document/d/1X1f8xSv6KlVBYfTjSjYvJ3Aqki52h-O39UY5MZwF24s/edit",
+          "desc": {
+            "th": "ตรวจรงควัตถุเรืองแสงของ *Pseudomonas* ภายใต้แสงอัลตราไวโอเลต",
+            "en": "Detects fluorescent pigment of *Pseudomonas* under ultraviolet light"
+          },
+          "keywords": "Pseudomonas เรืองแสง fluorescent UV อัลตราไวโอเลต glycerol"
+        },
+        {
+          "title": {
+            "th": "อาหารทดสอบคุณสมบัติส่งเสริมการเจริญเติบโตของพืช: CAS (Chrome Azurol S), Pikovskaya, Aleksandrow และ ZnO agar",
+            "en": "Plant growth-promotion test media: CAS (Chrome Azurol S), Pikovskaya, Aleksandrow and ZnO agar"
+          },
+          "url": "https://docs.google.com/document/d/1bYejmzriQHoNV_IybdpPy0I73ZjOFTRGbHFhoX6L-5o/edit",
+          "desc": {
+            "th": "ไซเดอโรฟอร์ การละลายฟอสเฟต โพแทสเซียม และสังกะสี",
+            "en": "Siderophore, phosphate, potassium and zinc solubilization"
+          },
+          "keywords": "siderophore ไซเดอโรฟอร์ CAS ฟอสเฟต phosphate Pikovskaya โพแทสเซียม potassium Aleksandrow สังกะสี zinc ZnO PGPR ส่งเสริมการเจริญเติบโตของพืช"
+        },
+        {
+          "title": {
+            "th": "Carrot agar สำหรับ *Phytophthora*",
+            "en": "Carrot agar for *Phytophthora*"
+          },
+          "url": "https://docs.google.com/document/d/1kWxfg1ofmHVze-wT3_CCmVm_-nJhjTTs04eoMT6BwdE/edit",
+          "desc": {
+            "th": "ชักนำ *Phytophthora* ให้สร้างสปอร์แรนเจียม และศึกษาการผสมพันธุ์",
+            "en": "Induces *Phytophthora* sporangia and supports mating-type studies"
+          },
+          "keywords": "Phytophthora แครอท carrot sporangium สปอร์แรนเจียม mating type เชื้อรา"
+        }
       ]
     },
     {
       "icon": "chem",
-      "title": { "th": "สารเคมี", "en": "Chemicals" },
+      "title": {
+        "th": "สารเคมี",
+        "en": "Chemicals"
+      },
       "items": [
-        { "title": { "th": "รายการสารเคมีในแล็บและตำแหน่งที่เก็บ", "en": "Chemical inventory and storage locations" }, "url": "" },
-        { "title": { "th": "การอ่าน SDS (Safety Data Sheet)", "en": "Reading an SDS (Safety Data Sheet)" }, "url": "" },
-        { "title": { "th": "การทิ้งของเสียอันตรายและวัสดุติดเชื้อ", "en": "Disposal of hazardous and infectious waste" }, "url": "" }
+        {
+          "title": {
+            "th": "รายการสารเคมีในแล็บและตำแหน่งที่เก็บ",
+            "en": "Chemical inventory and storage locations"
+          },
+          "url": ""
+        },
+        {
+          "title": {
+            "th": "การอ่าน SDS (Safety Data Sheet)",
+            "en": "Reading an SDS (Safety Data Sheet)"
+          },
+          "url": ""
+        },
+        {
+          "title": {
+            "th": "การทิ้งของเสียอันตรายและวัสดุติดเชื้อ",
+            "en": "Disposal of hazardous and infectious waste"
+          },
+          "url": ""
+        }
       ]
     },
     {
       "icon": "tech",
-      "title": { "th": "เทคนิคพื้นฐาน", "en": "Basic techniques" },
+      "title": {
+        "th": "เทคนิคพื้นฐาน",
+        "en": "Basic techniques"
+      },
       "items": [
-        { "title": { "th": "การฆ่าเชื้อด้วย autoclave", "en": "Sterilization by autoclave" }, "url": "https://docs.google.com/document/d/1UFcgYf_mBJwVDknznsXF2XtZJcZ2YRBfYKtaJxxWYNQ/edit" },
-        { "title": { "th": "การแยกเชื้อให้บริสุทธิ์", "en": "Isolating a pure culture" }, "url": "https://docs.google.com/document/d/1Iqujbh7w5xQCYUJbAET1QaA2asH2sSZuGiF2ITR5Scs/edit" },
-        { "title": { "th": "การเก็บรักษาเชื้อในกลีเซอรอลที่ −80 °C", "en": "Glycerol stocks at −80 °C" }, "url": "https://docs.google.com/document/d/1PacUuqkOIfdwLC9YshWefihFcUh-qk-JSdcwO3D5STI/edit" },
-        { "title": { "th": "การทดสอบ dual culture", "en": "Dual culture assay" }, "url": "https://docs.google.com/document/d/13l8dw11rVzAroqKrbaEaGok6Z_jbGMdsHxpiAJ3thpE/edit" }
+        {
+          "title": {
+            "th": "การฆ่าเชื้อด้วย autoclave",
+            "en": "Sterilization by autoclave"
+          },
+          "url": "https://docs.google.com/document/d/1UFcgYf_mBJwVDknznsXF2XtZJcZ2YRBfYKtaJxxWYNQ/edit",
+          "desc": {
+            "th": "ค่าที่ใช้ การจัดของเข้าเครื่อง การทดสอบเครื่อง และข้อควรระวัง",
+            "en": "Settings, loading, performance testing and precautions"
+          },
+          "keywords": "autoclave หม้อนึ่งความดัน นึ่ง ฆ่าเชื้อ sterilize sterilization 121 ขยะติดเชื้อ indicator tape biological indicator Geobacillus"
+        },
+        {
+          "title": {
+            "th": "การแยกเชื้อให้บริสุทธิ์",
+            "en": "Isolating a pure culture"
+          },
+          "url": "https://docs.google.com/document/d/1Iqujbh7w5xQCYUJbAET1QaA2asH2sSZuGiF2ITR5Scs/edit",
+          "desc": {
+            "th": "ขีดเชื้อแบบแบ่งสี่ส่วนเพื่อให้ได้โคโลนีเดี่ยว",
+            "en": "Quadrant streaking to obtain single colonies"
+          },
+          "keywords": "streak ขีดเชื้อ โคโลนีเดี่ยว single colony pure culture เชื้อบริสุทธิ์ aseptic ปลอดเชื้อ ห่วงเขี่ยเชื้อ loop แยกเชื้อ isolation"
+        },
+        {
+          "title": {
+            "th": "การเก็บรักษาเชื้อในกลีเซอรอลที่ −80 °C",
+            "en": "Glycerol stocks at −80 °C"
+          },
+          "url": "https://docs.google.com/document/d/1PacUuqkOIfdwLC9YshWefihFcUh-qk-JSdcwO3D5STI/edit",
+          "desc": {
+            "th": "เก็บแบคทีเรียและสปอร์ *Streptomyces* ในกลีเซอรอล",
+            "en": "Storing bacteria and *Streptomyces* spores in glycerol"
+          },
+          "keywords": "glycerol กลีเซอรอล stock เก็บเชื้อ เก็บรักษา -80 แช่แข็ง freezer cryovial สปอร์ spore Streptomyces"
+        },
+        {
+          "title": {
+            "th": "การทดสอบ dual culture",
+            "en": "Dual culture assay"
+          },
+          "url": "https://docs.google.com/document/d/13l8dw11rVzAroqKrbaEaGok6Z_jbGMdsHxpiAJ3thpE/edit",
+          "desc": {
+            "th": "คัดกรองเชื้อปฏิปักษ์ที่ยับยั้งเชื้อรา และคำนวณ PIRG",
+            "en": "Screening antagonists against fungi and calculating PIRG"
+          },
+          "keywords": "dual culture antagonist เชื้อปฏิปักษ์ เชื้อรา ยับยั้ง inhibition PIRG ชีววิธี biocontrol PDA"
+        }
       ]
     },
     {
       "icon": "dna",
-      "title": { "th": "อณูชีววิทยาและชีวสารสนเทศ", "en": "Molecular biology and bioinformatics" },
+      "title": {
+        "th": "อณูชีววิทยาและชีวสารสนเทศ",
+        "en": "Molecular biology and bioinformatics"
+      },
       "items": [
-        { "title": { "th": "การสกัดดีเอ็นเอ", "en": "DNA extraction" }, "url": "" },
-        { "title": { "th": "PCR (Polymerase Chain Reaction) ยีน 16S rRNA และการส่งหาลำดับเบส", "en": "16S rRNA gene PCR (Polymerase Chain Reaction) and sequencing" }, "url": "" },
-        { "title": { "th": "ขั้นตอนวิเคราะห์จีโนม", "en": "Genome analysis workflow" }, "url": "" }
+        {
+          "title": {
+            "th": "การสกัดดีเอ็นเอ",
+            "en": "DNA extraction"
+          },
+          "url": ""
+        },
+        {
+          "title": {
+            "th": "PCR (Polymerase Chain Reaction) ยีน 16S rRNA และการส่งหาลำดับเบส",
+            "en": "16S rRNA gene PCR (Polymerase Chain Reaction) and sequencing"
+          },
+          "url": ""
+        },
+        {
+          "title": {
+            "th": "ขั้นตอนวิเคราะห์จีโนม",
+            "en": "Genome analysis workflow"
+          },
+          "url": ""
+        }
       ]
     },
     {
       "icon": "study",
-      "title": { "th": "การเรียนและการเขียน", "en": "Study and writing" },
+      "title": {
+        "th": "การเรียนและการเขียน",
+        "en": "Study and writing"
+      },
       "items": [
-        { "title": { "th": "ขั้นตอนวิทยานิพนธ์ของบัณฑิตวิทยาลัย", "en": "Graduate School thesis procedures" }, "url": "" },
-        { "title": { "th": "การจัดการเอกสารอ้างอิง", "en": "Managing references" }, "url": "" },
-        { "title": { "th": "แม่แบบรายงานความก้าวหน้า", "en": "Progress report template" }, "url": "" }
+        {
+          "title": {
+            "th": "ขั้นตอนวิทยานิพนธ์ของบัณฑิตวิทยาลัย",
+            "en": "Graduate School thesis procedures"
+          },
+          "url": ""
+        },
+        {
+          "title": {
+            "th": "การจัดการเอกสารอ้างอิง",
+            "en": "Managing references"
+          },
+          "url": ""
+        },
+        {
+          "title": {
+            "th": "แม่แบบรายงานความก้าวหน้า",
+            "en": "Progress report template"
+          },
+          "url": ""
+        }
       ]
     }
   ]

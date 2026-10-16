@@ -208,7 +208,7 @@ main.sub { max-width: 76rem; margin-inline: auto; }
 .page-head .back::before { content: "\2190\00a0"; }
 .page-head h1 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); font-weight: 300; line-height: 1.2; }
 .page-head .head p a { color: var(--accent-ink); }
-.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.5rem; padding: 1rem 1.25rem; background: var(--surface); border-radius: var(--r-md); margin-bottom: 1.75rem; }
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.5rem; padding: 1rem 1.25rem; background: var(--surface); border-radius: var(--r-md); margin-bottom: 1.25rem; }
 .filters .quick { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .filters .pill[aria-pressed="true"] { background: var(--accent); color: var(--accent-on); border-color: var(--accent); }
 .filters .range { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; font-size: 0.93rem; color: var(--muted); }
@@ -240,7 +240,7 @@ main.sub { max-width: 76rem; margin-inline: auto; }
 .booking-empty .t { font-size: 1.25rem; font-weight: 500; color: var(--on-moss); }
 .booking-empty p { color: var(--muted); max-width: 30rem; font-weight: 300; }
 .booking-side h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
-.booking-side h3 + ul, .booking-side h3 + p { margin-bottom: 1.75rem; }
+.booking-side h3 + ul, .booking-side h3 + p { margin-bottom: 1.25rem; }
 .booking-side ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.5rem; color: var(--muted); font-weight: 300; font-size: 0.97rem; }
 .booking-side p { color: var(--muted); font-weight: 300; font-size: 0.97rem; }
 @media (max-width: 860px) { .booking-layout { grid-template-columns: minmax(0, 1fr); } .booking-box iframe { height: 900px; } }
@@ -265,7 +265,7 @@ main.sub { max-width: 76rem; margin-inline: auto; }
 @media (max-width: 860px) { .form-layout { grid-template-columns: minmax(0, 1fr); } }
 
 /* Lab members knowledge base */
-.kb-access { display: flex; gap: 1rem; align-items: flex-start; background: var(--moss); color: var(--on-moss); border-radius: var(--r-md); padding: 1.25rem 1.5rem; margin-bottom: 1.75rem; }
+.kb-access { display: flex; gap: 1rem; align-items: flex-start; background: var(--moss); color: var(--on-moss); border-radius: var(--r-md); padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; }
 .kb-access svg { width: 30px; height: 30px; flex: none; fill: none; stroke: var(--accent-ink); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .kb-access .t { font-weight: 600; margin-bottom: 0.2rem; }
 .kb-access p:not(.t) { color: color-mix(in srgb, var(--on-moss) 75%, transparent); font-weight: 300; font-size: 0.97rem; }
@@ -283,3 +283,18 @@ main.sub { max-width: 76rem; margin-inline: auto; }
 .kb-cat li.soon { display: flex; justify-content: space-between; gap: 0.75rem; align-items: center; padding: 0.7rem 0.15rem; min-height: 44px; color: var(--muted); font-weight: 300; line-height: 1.5; }
 .kb-cat li .tag { flex: none; font-size: 0.75rem; border: 1px solid var(--line); border-radius: 999px; padding: 0.15rem 0.55rem; }
 .kb-foot { margin-top: 1.5rem; }
+.kb-tools { display: grid; gap: 0.85rem; margin-bottom: 1.25rem; }
+.kb-search { display: flex; align-items: center; gap: 0.6rem; border: 1px solid var(--line); background: var(--paper); border-radius: 999px; padding: 0 1.1rem; min-height: 52px; }
+.kb-search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
+.kb-search svg { width: 20px; height: 20px; flex: none; fill: none; stroke: var(--muted); stroke-width: 2; stroke-linecap: round; }
+.kb-search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--ink); font: 400 1.02rem var(--font); padding: 0.8rem 0; }
+.kb-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.kb-jump { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: flex-start; margin: 0; padding: 0; }
+.kb-count { color: var(--muted); font-size: 0.92rem; font-weight: 300; display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; align-items: center; }
+.kb-clear { border: 0; background: none; color: var(--accent-ink); font: 500 0.92rem var(--font); cursor: pointer; padding: 0.4rem 0; min-height: 44px; }
+.kb-clear:hover { text-decoration: underline; }
+.kb-cat { scroll-margin-top: 6rem; }
+.kb-cat li small { display: block; color: var(--muted); font-size: 0.86rem; font-weight: 300; line-height: 1.5; margin-top: 0.1rem; }
+.kb-empty { background: var(--surface); border-radius: var(--r-md); padding: 1.5rem; }
+.kb-empty .t { font-weight: 600; margin-bottom: 0.2rem; }
+.kb-empty p:not(.t) { color: var(--muted); font-weight: 300; }
