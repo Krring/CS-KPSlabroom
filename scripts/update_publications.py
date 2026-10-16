@@ -14,7 +14,7 @@ import urllib.parse
 import urllib.request
 
 ORCID_ID = "0000-0002-4092-6575"
-MAILTO = "lab-website@example.org"  # Crossref asks for a contact address; change to the lab email
+MAILTO = "chatsuda.sak@ku.th"  # contact address requested by Crossref
 OUT = pathlib.Path(__file__).resolve().parent.parent / "data" / "publications.json"
 UA = f"lab-website-updater (mailto:{MAILTO})"
 
