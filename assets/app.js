@@ -7,6 +7,9 @@
       "nav.services": "บริการ", "nav.servicesLong": "บริการตรวจวิเคราะห์",
       "nav.news": "ข่าว", "nav.newsLong": "ข่าวและกิจกรรม", "nav.contact": "ติดต่อ",
       "nav.portal": "สำหรับสมาชิกแล็บ",
+      "kb.title": "คลังความรู้สำหรับสมาชิกแล็บ", "kb.lead": "คู่มือการทำงานในแล็บ แยกตามหมวด กดชื่อเรื่องเพื่อเปิดเอกสาร",
+      "kb.accessTitle": "เปิดได้เฉพาะสมาชิกแล็บ", "kb.accessBody": "เอกสารเปิดได้เฉพาะบัญชี Google ที่อาจารย์เพิ่มสิทธิ์ให้ ถ้าเปิดแล้วเจอหน้าขอสิทธิ์เข้าถึง ให้ตรวจว่าเข้าสู่ระบบด้วยบัญชีที่แจ้งอาจารย์ไว้ หรือติดต่ออาจารย์",
+      "kb.soon": "กำลังจัดทำ", "kb.n": "{n} เรื่อง", "kb.folder": "เปิดโฟลเดอร์ทั้งหมดใน Google Drive",
       "hero.join": "สนใจเข้าร่วมแล็บ", "hero.research": "ดูงานวิจัยของเรา",
       "research.lead": "ห้าแนวทางที่แล็บทำอยู่ ตั้งแต่ระดับยีนไปจนถึงในแปลงปลูก",
       "pubs.note": "รายการเต็มดูได้ที่", "pubs.all": "ดูผลงานทั้งหมด {n} เรื่อง", "pubs.count": "แสดง {n} จาก {total} เรื่อง", "pubs.n": "{n} เรื่อง", "pubs.none": "ไม่มีผลงานในช่วงปีที่เลือก", "pubs.from": "ตั้งแต่ปี", "pubs.to": "ถึงปี", "pubs.allYears": "ทุกปี", "pubs.last3": "3 ปีล่าสุด", "pubs.last5": "5 ปีล่าสุด", "pubs.back": "กลับหน้าแรก", "pubs.lead": "ผลงานตีพิมพ์ทั้งหมด เรียงจากใหม่ไปเก่า ชื่อของอาจารย์เป็นตัวหนา",
@@ -42,6 +45,9 @@
       "nav.services": "Services", "nav.servicesLong": "Analytical services",
       "nav.news": "News", "nav.newsLong": "News and events", "nav.contact": "Contact",
       "nav.portal": "Lab members",
+      "kb.title": "Knowledge base for lab members", "kb.lead": "Lab guides grouped by topic. Select a title to open the document.",
+      "kb.accessTitle": "Lab members only", "kb.accessBody": "Documents open only for Google accounts the PI has granted access. If you see an access request page, check that you are signed in with the account you gave the PI, or contact the PI.",
+      "kb.soon": "In preparation", "kb.n": "{n} topics", "kb.folder": "Open the full folder in Google Drive",
       "hero.join": "Join the lab", "hero.research": "See our research",
       "research.lead": "Five lines of work, from genes in a genome to plants in the field",
       "pubs.note": "Full list on", "pubs.all": "See all {n} publications", "pubs.count": "Showing {n} of {total}", "pubs.n": "{n} papers", "pubs.none": "No publications in the selected years", "pubs.from": "From", "pubs.to": "To", "pubs.allYears": "All years", "pubs.last3": "Last 3 years", "pubs.last5": "Last 5 years", "pubs.back": "Back to home", "pubs.lead": "All publications, newest first. The PI's name is in bold.",
@@ -74,7 +80,7 @@
     }
   };
   var GROUP_ORDER = ["pi", "postdoc", "phd", "ms", "ug", "staff", "alumni"];
-  var FILES = ["site", "research", "members", "publications", "services", "news"];
+  var FILES = ["site", "research", "members", "publications", "services", "news", "kb"];
   var GLYPHS = [
     '<path d="M6 34h8M14 34V16h10M14 25h18M24 16V8h10M24 16h10"/>',
     '<circle cx="20" cy="20" r="15"/><circle cx="12" cy="20" r="3"/><path d="M26 9v22"/>',
@@ -150,11 +156,10 @@
     if (lines && lines.length && $(".hero h1")) {
       $(".hero h1").innerHTML = lines.map(function (l) { return '<span class="nb">' + esc(l) + "</span>"; }).join(lang === "th" ? "<wbr>" : " ");
     }
-    var portal = $("#portal-link");
-    if (portal) portal.href = isPlaceholder(s.membersPortalUrl) ? "contact.html" : s.membersPortalUrl;
 
     if ($("#pub-full")) { renderFull(); return; }
     if ($("#contact-page")) { renderContact(); return; }
+    if ($("#kb-page")) { renderKb(); return; }
     $("#research-list").innerHTML = data.research.map(function (r, i) {
       return '<article class="tile"><svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
         GLYPHS[i % GLYPHS.length] + "</svg><h3>" + esc(t(r.title)) + "</h3><p>" + rich(t(r.body)) + "</p></article>";
@@ -230,6 +235,29 @@
     var open = $("#booking-open");
     if (open) { open.hidden = !link; if (link) open.href = link; }
     $("#ct-email").textContent = s.email;
+  }
+
+  var KB_ICONS = {
+    start: '<path d="M6 26V9l10-5 10 5v17"/><path d="M12 26v-7h8v7M4 26h24"/>',
+    media: '<ellipse cx="16" cy="17" rx="12" ry="9"/><ellipse cx="16" cy="15" rx="12" ry="9"/><circle cx="12" cy="14" r="1.6"/><circle cx="19" cy="17" r="1.6"/><circle cx="20" cy="12" r="1.2"/>',
+    chem: '<path d="M12 4h8M13 4v8l-7 12a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3l-7-12V4"/><path d="M9 20h14"/>',
+    tech: '<path d="M6 26 20 12"/><circle cx="23" cy="9" r="4"/><path d="M4 28h10"/>',
+    dna: '<path d="M10 4c0 8 12 8 12 16s-12 4-12 8M22 4c0 8-12 8-12 16s12 4 12 8"/><path d="M12 10h8M12 22h8"/>',
+    study: '<path d="M4 8l12-4 12 4-12 4-12-4Z"/><path d="M9 10v7c0 2 3 4 7 4s7-2 7-4v-7M28 8v9"/>'
+  };
+  function renderKb() {
+    var ui = UI[lang], kb = data.kb;
+    $("#kb-list").innerHTML = kb.categories.map(function (c) {
+      return '<article class="kb-cat"><div class="kb-top"><svg viewBox="0 0 32 32" aria-hidden="true">' + (KB_ICONS[c.icon] || KB_ICONS.tech) +
+        "</svg><div><h2>" + esc(t(c.title)) + '</h2><span class="kb-n">' + ui["kb.n"].replace("{n}", c.items.length) + "</span></div></div><ul>" +
+        c.items.map(function (it) {
+          return it.url && !isPlaceholder(it.url)
+            ? '<li><a href="' + esc(it.url) + '" target="_blank" rel="noopener"><span>' + rich(t(it.title)) + "</span></a></li>"
+            : '<li class="soon"><span>' + rich(t(it.title)) + '</span><span class="tag">' + ui["kb.soon"] + "</span></li>";
+        }).join("") + "</ul></article>";
+    }).join("");
+    var f = $("#kb-folder");
+    if (f) { f.hidden = !kb.folderUrl; f.href = kb.folderUrl || "#"; }
   }
 
   var ME = /\b(Sakdapetsiri C|Chirapanda C)\b/g;
@@ -345,7 +373,7 @@
   });
 
   load().then(function (d) { data = d; render(); wireFilters(); wireCopy(); wireForm(); }).catch(function (e) {
-    var target = $("#research-list") || $("#pub-full");
+    var target = $("#research-list") || $("#pub-full") || $("#kb-list");
     if (target) target.textContent = UI[lang].loadError;
     if (window.console) console.error(e);
   });

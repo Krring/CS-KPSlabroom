@@ -1,0 +1,64 @@
+{
+  "_note": "คลังความรู้สำหรับสมาชิกแล็บ แต่ละเรื่องใส่ url ของ Google Docs ถ้ายังไม่มีเอกสาร ให้ใส่ \"url\": \"\" เว็บจะแสดงว่ากำลังจัดทำ",
+  "folderUrl": "https://drive.google.com/drive/folders/1TwhI6e1HN8alf_GFsj2TVahCyDpvNiag",
+  "categories": [
+    {
+      "icon": "start",
+      "title": { "th": "เริ่มต้นในแล็บ", "en": "Getting started" },
+      "items": [
+        { "title": { "th": "กฎและความปลอดภัยในห้องปฏิบัติการ", "en": "Laboratory rules and safety" }, "url": "https://docs.google.com/document/d/1obn_AGI-chxz1PhUXSQnDvUP7sQTbXeYBVRgrAWRY0w/edit" },
+        { "title": { "th": "การจองและใช้เครื่องมือ", "en": "Booking and using equipment" }, "url": "" },
+        { "title": { "th": "ตารางทำความสะอาดและหน้าที่เวร", "en": "Cleaning roster and duties" }, "url": "" }
+      ]
+    },
+    {
+      "icon": "media",
+      "title": { "th": "อาหารเลี้ยงเชื้อ", "en": "Culture media" },
+      "items": [
+        { "title": { "th": "NA (Nutrient Agar) และ NB (Nutrient Broth)", "en": "NA (Nutrient Agar) and NB (Nutrient Broth)" }, "url": "https://docs.google.com/document/d/1IDA-rYDpLNQve8kz8VoyYRVIDgYkGpPSdSQ3h1PXTTs/edit" },
+        { "title": { "th": "PDA (Potato Dextrose Agar)", "en": "PDA (Potato Dextrose Agar)" }, "url": "https://docs.google.com/document/d/10YFLfzKbveFJQ7z_MPXYMsyelh6skE8YzfJdVN7DkJg/edit" },
+        { "title": { "th": "ISP2 (International Streptomyces Project medium 2) สำหรับแอคติโนแบคทีเรีย", "en": "ISP2 (International Streptomyces Project medium 2) for actinobacteria" }, "url": "https://docs.google.com/document/d/19-HsScRpWHz-XoKGz4Wo8erHgdU76rUy2dzn5ZtkgNw/edit" },
+        { "title": { "th": "King's B สำหรับ *Pseudomonas*", "en": "King's B for *Pseudomonas*" }, "url": "https://docs.google.com/document/d/1X1f8xSv6KlVBYfTjSjYvJ3Aqki52h-O39UY5MZwF24s/edit" },
+        { "title": { "th": "อาหารทดสอบคุณสมบัติส่งเสริมการเจริญเติบโตของพืช: CAS (Chrome Azurol S), Pikovskaya, Aleksandrow และ ZnO agar", "en": "Plant growth-promotion test media: CAS (Chrome Azurol S), Pikovskaya, Aleksandrow and ZnO agar" }, "url": "https://docs.google.com/document/d/1bYejmzriQHoNV_IybdpPy0I73ZjOFTRGbHFhoX6L-5o/edit" },
+        { "title": { "th": "Carrot agar สำหรับ *Phytophthora*", "en": "Carrot agar for *Phytophthora*" }, "url": "https://docs.google.com/document/d/1kWxfg1ofmHVze-wT3_CCmVm_-nJhjTTs04eoMT6BwdE/edit" }
+      ]
+    },
+    {
+      "icon": "chem",
+      "title": { "th": "สารเคมี", "en": "Chemicals" },
+      "items": [
+        { "title": { "th": "รายการสารเคมีในแล็บและตำแหน่งที่เก็บ", "en": "Chemical inventory and storage locations" }, "url": "" },
+        { "title": { "th": "การอ่าน SDS (Safety Data Sheet)", "en": "Reading an SDS (Safety Data Sheet)" }, "url": "" },
+        { "title": { "th": "การทิ้งของเสียอันตรายและวัสดุติดเชื้อ", "en": "Disposal of hazardous and infectious waste" }, "url": "" }
+      ]
+    },
+    {
+      "icon": "tech",
+      "title": { "th": "เทคนิคพื้นฐาน", "en": "Basic techniques" },
+      "items": [
+        { "title": { "th": "การฆ่าเชื้อด้วย autoclave", "en": "Sterilization by autoclave" }, "url": "https://docs.google.com/document/d/1UFcgYf_mBJwVDknznsXF2XtZJcZ2YRBfYKtaJxxWYNQ/edit" },
+        { "title": { "th": "การแยกเชื้อให้บริสุทธิ์", "en": "Isolating a pure culture" }, "url": "https://docs.google.com/document/d/1Iqujbh7w5xQCYUJbAET1QaA2asH2sSZuGiF2ITR5Scs/edit" },
+        { "title": { "th": "การเก็บรักษาเชื้อในกลีเซอรอลที่ −80 °C", "en": "Glycerol stocks at −80 °C" }, "url": "https://docs.google.com/document/d/1PacUuqkOIfdwLC9YshWefihFcUh-qk-JSdcwO3D5STI/edit" },
+        { "title": { "th": "การทดสอบ dual culture", "en": "Dual culture assay" }, "url": "https://docs.google.com/document/d/13l8dw11rVzAroqKrbaEaGok6Z_jbGMdsHxpiAJ3thpE/edit" }
+      ]
+    },
+    {
+      "icon": "dna",
+      "title": { "th": "อณูชีววิทยาและชีวสารสนเทศ", "en": "Molecular biology and bioinformatics" },
+      "items": [
+        { "title": { "th": "การสกัดดีเอ็นเอ", "en": "DNA extraction" }, "url": "" },
+        { "title": { "th": "PCR (Polymerase Chain Reaction) ยีน 16S rRNA และการส่งหาลำดับเบส", "en": "16S rRNA gene PCR (Polymerase Chain Reaction) and sequencing" }, "url": "" },
+        { "title": { "th": "ขั้นตอนวิเคราะห์จีโนม", "en": "Genome analysis workflow" }, "url": "" }
+      ]
+    },
+    {
+      "icon": "study",
+      "title": { "th": "การเรียนและการเขียน", "en": "Study and writing" },
+      "items": [
+        { "title": { "th": "ขั้นตอนวิทยานิพนธ์ของบัณฑิตวิทยาลัย", "en": "Graduate School thesis procedures" }, "url": "" },
+        { "title": { "th": "การจัดการเอกสารอ้างอิง", "en": "Managing references" }, "url": "" },
+        { "title": { "th": "แม่แบบรายงานความก้าวหน้า", "en": "Progress report template" }, "url": "" }
+      ]
+    }
+  ]
+}

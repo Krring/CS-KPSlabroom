@@ -263,3 +263,23 @@ main.sub { max-width: 76rem; margin-inline: auto; }
 .status.bad { color: var(--flag); }
 .booking-side .addr { color: var(--ink); font-weight: 500; margin-bottom: 0.6rem; user-select: all; }
 @media (max-width: 860px) { .form-layout { grid-template-columns: minmax(0, 1fr); } }
+
+/* Lab members knowledge base */
+.kb-access { display: flex; gap: 1rem; align-items: flex-start; background: var(--moss); color: var(--on-moss); border-radius: var(--r-md); padding: 1.25rem 1.5rem; margin-bottom: 1.75rem; }
+.kb-access svg { width: 30px; height: 30px; flex: none; fill: none; stroke: var(--accent-ink); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.kb-access .t { font-weight: 600; margin-bottom: 0.2rem; }
+.kb-access p:not(.t) { color: color-mix(in srgb, var(--on-moss) 75%, transparent); font-weight: 300; font-size: 0.97rem; }
+.kb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr)); gap: 12px; }
+.kb-cat { background: var(--surface); border-radius: var(--r-md); padding: 1.5rem; display: grid; gap: 1rem; align-content: start; }
+.kb-top { display: flex; gap: 0.85rem; align-items: center; }
+.kb-top svg { width: 34px; height: 34px; flex: none; fill: none; stroke: var(--accent-ink); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.kb-top h2 { font-size: 1.2rem; font-weight: 500; line-height: 1.35; }
+.kb-n { color: var(--muted); font-size: 0.85rem; font-weight: 300; }
+.kb-cat ul { list-style: none; margin: 0; padding: 0; display: grid; }
+.kb-cat li { border-top: 1px solid var(--line); }
+.kb-cat li a { display: flex; justify-content: space-between; gap: 0.75rem; align-items: center; padding: 0.7rem 0.15rem; min-height: 44px; color: var(--ink); text-decoration: none; line-height: 1.5; }
+.kb-cat li a::after { content: "\2197"; color: var(--accent-ink); flex: none; }
+.kb-cat li a:hover, .kb-cat li a:focus-visible { color: var(--accent-ink); }
+.kb-cat li.soon { display: flex; justify-content: space-between; gap: 0.75rem; align-items: center; padding: 0.7rem 0.15rem; min-height: 44px; color: var(--muted); font-weight: 300; line-height: 1.5; }
+.kb-cat li .tag { flex: none; font-size: 0.75rem; border: 1px solid var(--line); border-radius: 999px; padding: 0.15rem 0.55rem; }
+.kb-foot { margin-top: 1.5rem; }

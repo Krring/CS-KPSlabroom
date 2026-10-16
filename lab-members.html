@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lab members | Microbiome and Biocontrol Lab</title>
+<meta name="description" content="ห้องปฏิบัติการชีวนิเวศของแบคทีเรียและการควบคุมเชื้อสาเหตุโรคพืชโดยชีววิธี ภาควิชาโรคพืช มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/style.css?v=23">
+</head>
+<body>
+<header class="top">
+  <div class="bar">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span><span data-bind="labShort">Microbiome and Biocontrol Laboratory</span></a>
+    <nav aria-label="Sections">
+      <a href="index.html" data-i18n="nav.home">หน้าแรก</a>
+      <a href="index.html#research" data-i18n="nav.research">งานวิจัย</a>
+      <a href="index.html#members" data-i18n="nav.members">สมาชิก</a>
+      <a href="publications.html" data-i18n="nav.publications">ผลงานตีพิมพ์</a>
+      <a href="index.html#services" data-i18n="nav.services">บริการ</a>
+      <a href="index.html#news" data-i18n="nav.news">ข่าว</a>
+      <a href="contact.html" data-i18n="nav.contact">ติดต่อ</a>
+    </nav>
+    <div class="actions">
+      <a class="pill ghost" id="portal-link" href="lab-members.html" aria-current="page" data-i18n="nav.portal">สำหรับสมาชิกแล็บ</a>
+      <button class="pill lang" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="sub" id="kb-page">
+  <section class="block page-head">
+    <a class="back" href="index.html" data-i18n="pubs.back">กลับหน้าแรก</a>
+    <div class="head">
+      <h1 data-i18n="kb.title">คลังความรู้สำหรับสมาชิกแล็บ</h1>
+      <p data-i18n="kb.lead"></p>
+    </div>
+
+    <div class="kb-access" role="note">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="14" width="18" height="13" rx="2.5"/><path d="M11 14v-4a5 5 0 0 1 10 0v4M16 19v3"/></svg>
+      <div>
+        <p class="t" data-i18n="kb.accessTitle">เปิดได้เฉพาะสมาชิกแล็บ</p>
+        <p data-i18n="kb.accessBody"></p>
+      </div>
+    </div>
+
+    <div class="kb-grid" id="kb-list"></div>
+
+    <p class="kb-foot"><a class="pill ghost small" id="kb-folder" href="#" target="_blank" rel="noopener" data-i18n="kb.folder">เปิดโฟลเดอร์ทั้งหมดใน Google Drive</a></p>
+  </section>
+</main>
+
+<footer>
+  <span data-bind="labName"></span>
+  <span data-bind="department"></span>
+</footer>
+
+<script src="assets/app.js?v=23"></script>
+</body>
+</html>
