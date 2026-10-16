@@ -117,6 +117,18 @@
             "en": "Induces *Phytophthora* sporangia and supports mating-type studies"
           },
           "keywords": "Phytophthora แครอท carrot sporangium สปอร์แรนเจียม mating type เชื้อรา"
+        },
+        {
+          "title": {
+            "th": "SCA (Starch Casein Agar) สำหรับแอคติโนแบคทีเรีย",
+            "en": "SCA (Starch Casein Agar) for actinobacteria"
+          },
+          "url": "https://docs.google.com/document/d/1B7HO7CgOvZWwayXY4OjLUQSBAkPXAYhsUqLjbguVv8s/edit",
+          "desc": {
+            "th": "อาหารแยกแอคติโนแบคทีเรียจากดิน และวิธีเตรียมส่วนประกอบปริมาณน้อย",
+            "en": "Medium for isolating actinobacteria from soil, with tips for low-amount ingredients"
+          },
+          "keywords": "SCA starch casein แป้ง เคซีน แอคติโนแบคทีเรีย actinobacteria actinomycetes Streptomyces แยกเชื้อ ดิน isolation stock"
         }
       ]
     },
@@ -148,6 +160,30 @@
             "en": "Disposal of hazardous and infectious waste"
           },
           "url": ""
+        },
+        {
+          "title": {
+            "th": "การคำนวณความเข้มข้นโมลาร์ (molarity)",
+            "en": "Calculating molar concentration (molarity)"
+          },
+          "url": "https://docs.google.com/document/d/1p8weOI6wVOkewl3q9-ubBocjOSvww7J0fzh-3g1nrbY/edit",
+          "desc": {
+            "th": "โมล มวลโมเลกุล การแปลงหน่วย และน้ำหนักสารที่ต้องชั่ง",
+            "en": "Moles, molar mass, unit conversion and how much to weigh"
+          },
+          "keywords": "molarity โมลาร์ โมล mol molar mass มวลโมเลกุล MW FW mM µM uM ไมโครโมลาร์ มิลลิโมลาร์ เปอร์เซ็นต์ % w/v น้ำผลึก hydrate ชั่ง คำนวณ เตรียมสารละลาย"
+        },
+        {
+          "title": {
+            "th": "การเจือจางสารละลายด้วยสูตร C1V1 = C2V2",
+            "en": "Diluting solutions with C1V1 = C2V2"
+          },
+          "url": "https://docs.google.com/document/d/1a4CaNrhCqzcsd_kNMGAIRLMxJwfLvTSJnenVTRHM9rI/edit",
+          "desc": {
+            "th": "คำนวณปริมาตรสารละลายเข้มข้นที่ต้องใช้ และอัตราการเจือจาง",
+            "en": "Volume of stock needed and dilution factor"
+          },
+          "keywords": "C1V1 C2V2 M1V1 เจือจาง dilution dilution factor stock สารละลายเข้มข้น เอทานอล 70% ethanol กลีเซอรอล glycerol คำนวณ"
         }
       ]
     },
