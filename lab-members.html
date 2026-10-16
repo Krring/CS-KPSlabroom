@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=24">
+<link rel="stylesheet" href="assets/style.css?v=25">
 </head>
 <body>
 <header class="top">
@@ -32,10 +32,10 @@
 
 <main class="sub" id="kb-page">
   <section class="block page-head">
-    <a class="back" href="index.html" data-i18n="pubs.back">กลับหน้าแรก</a>
+    <a class="back" id="kb-back" href="index.html" data-i18n="pubs.back">กลับหน้าแรก</a>
     <div class="head">
-      <h1 data-i18n="kb.title">คลังความรู้สำหรับสมาชิกแล็บ</h1>
-      <p data-i18n="kb.lead"></p>
+      <h1 id="kb-h1">คลังความรู้สำหรับสมาชิกแล็บ</h1>
+      <p id="kb-lead"></p>
     </div>
 
     <div class="kb-tools">
@@ -60,6 +60,7 @@
     <div class="kb-empty" id="kb-empty" hidden>
       <p class="t" data-i18n="kb.noneTitle">ไม่พบเรื่องที่ค้นหา</p>
       <p data-i18n="kb.noneBody"></p>
+      <a class="pill ghost small" id="kb-all" href="lab-members.html" hidden data-i18n="kb.searchAll">ค้นหาในทุกหมวด</a>
     </div>
 
     <p class="kb-foot"><a class="pill ghost small" id="kb-folder" href="#" target="_blank" rel="noopener" data-i18n="kb.folder">เปิดโฟลเดอร์ทั้งหมดใน Google Drive</a></p>
@@ -71,6 +72,6 @@
   <span data-bind="department"></span>
 </footer>
 
-<script src="assets/app.js?v=24"></script>
+<script src="assets/app.js?v=25"></script>
 </body>
 </html>
