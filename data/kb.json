@@ -152,14 +152,24 @@
             "th": "การอ่าน SDS (Safety Data Sheet)",
             "en": "Reading an SDS (Safety Data Sheet)"
           },
-          "url": ""
+          "url": "https://docs.google.com/document/d/11z3t7wr66chIMZ8xjoveEqL-nsqeUaIUI-8iGX9wbiE/edit",
+          "desc": {
+            "th": "16 หัวข้อของ SDS และหัวข้อที่ต้องอ่านก่อนใช้สารเคมี",
+            "en": "The 16 SDS sections and which to read before using a chemical"
+          },
+          "keywords": "SDS MSDS safety data sheet เอกสารข้อมูลความปลอดภัย GHS อันตราย สารเคมี ปฐมพยาบาล หก รั่วไหล PPE"
         },
         {
           "title": {
             "th": "การทิ้งของเสียอันตรายและวัสดุติดเชื้อ",
             "en": "Disposal of hazardous and infectious waste"
           },
-          "url": ""
+          "url": "https://docs.google.com/document/d/17mnZtTlmjTUoYePPSYGEHYaRq8vovE3C2l61FJSFpOY/edit",
+          "desc": {
+            "th": "แยกทิ้งขยะติดเชื้อ ของมีคม และของเสียสารเคมี",
+            "en": "Disposing of infectious waste, sharps and chemical waste"
+          },
+          "keywords": "ขยะ waste ขยะติดเชื้อ biohazard ของมีคม sharps เข็ม แก้วแตก ของเสียสารเคมี chemical waste ทิ้ง กำจัด autoclave"
         },
         {
           "title": {
@@ -242,6 +252,54 @@
             "en": "Screening antagonists against fungi and calculating PIRG"
           },
           "keywords": "dual culture antagonist เชื้อปฏิปักษ์ เชื้อรา ยับยั้ง inhibition PIRG ชีววิธี biocontrol PDA"
+        },
+        {
+          "title": {
+            "th": "การย้อมแกรม (Gram stain)",
+            "en": "Gram staining"
+          },
+          "url": "https://docs.google.com/document/d/11CituPG61hhnFjecPnchl4bCtlSO42j1K2wHZ_MTG_o/edit",
+          "desc": {
+            "th": "ขั้นตอนย้อมและการอ่านผลแกรมบวกแกรมลบ",
+            "en": "Staining steps and reading Gram-positive and Gram-negative results"
+          },
+          "keywords": "gram stain ย้อมแกรม แกรมบวก แกรมลบ crystal violet iodine safranin decolorizer สไลด์ กล้องจุลทรรศน์ microscope"
+        },
+        {
+          "title": {
+            "th": "การเจือจางเป็นลำดับ (serial dilution) และการนับ CFU",
+            "en": "Serial dilution and CFU counting"
+          },
+          "url": "https://docs.google.com/document/d/1xAkui8GruxPiuwH3JgOGtmIOg54VQ9ApSrDackRVro8/edit",
+          "desc": {
+            "th": "เจือจางทีละสิบเท่า นับโคโลนี และคำนวณ CFU/mL",
+            "en": "Ten-fold dilutions, colony counting and CFU/mL"
+          },
+          "keywords": "serial dilution เจือจาง CFU colony forming unit นับโคโลนี plate count spread plate pour plate ปริมาณเชื้อ 10 เท่า"
+        },
+        {
+          "title": {
+            "th": "การใช้ไมโครปิเปตและตู้ปลอดเชื้อ",
+            "en": "Micropipettes and biosafety cabinets"
+          },
+          "url": "https://docs.google.com/document/d/1K2gvisKeBXrpOKLDKxvEPGsJv1Np4DxB0bKoAcAYkYo/edit",
+          "desc": {
+            "th": "เทคนิคดูดจ่ายของเหลว และการทำงานในตู้ชีวนิรภัย",
+            "en": "Pipetting technique and working in a biosafety cabinet"
+          },
+          "keywords": "micropipette ไมโครปิเปต ปิเปต pipette ทิป tip reverse pipetting ตู้ปลอดเชื้อ biosafety cabinet BSC laminar flow clean bench HEPA"
+        },
+        {
+          "title": {
+            "th": "การวัด OD600 ด้วยสเปกโตรโฟโตมิเตอร์",
+            "en": "Measuring OD600 with a spectrophotometer"
+          },
+          "url": "https://docs.google.com/document/d/1N2__ztihkPRQbB4-kNCoLswjOPchw8N5DYI44rH4DtE/edit",
+          "desc": {
+            "th": "วัดความขุ่นของเชื้อ การตั้งค่าศูนย์ และการเจือจาง",
+            "en": "Measuring culture density, blanking and dilution"
+          },
+          "keywords": "OD600 OD optical density ความขุ่น สเปกโตรโฟโตมิเตอร์ spectrophotometer absorbance blank คิวเวตต์ cuvette growth curve"
         }
       ]
     },
@@ -265,14 +323,60 @@
             "th": "PCR (Polymerase Chain Reaction) ยีน 16S rRNA และการส่งหาลำดับเบส",
             "en": "16S rRNA gene PCR (Polymerase Chain Reaction) and sequencing"
           },
-          "url": ""
+          "url": "https://docs.google.com/document/d/1yQ9Qgx8FB2fXt2615Lb7vptVbihg06LybC7Mxgue-AA/edit",
+          "desc": {
+            "th": "ไพรเมอร์ 27F/1492R โปรแกรม PCR การตรวจเจล และการแปลผล",
+            "en": "Primers 27F/1492R, PCR program, gel check and interpretation"
+          },
+          "keywords": "PCR 16S rRNA ไพรเมอร์ primer 27F 1492R ระบุชนิด identification sequencing ส่งหาลำดับเบส Sanger EzBioCloud BLAST เจล gel 98.65 98.7"
         },
         {
           "title": {
             "th": "ขั้นตอนวิเคราะห์จีโนม",
             "en": "Genome analysis workflow"
           },
-          "url": ""
+          "url": "https://docs.google.com/document/d/1okVXCoUbM2TgTcTg7xwGRBPWDJsqNvN-cXo9JXqUlDg/edit",
+          "desc": {
+            "th": "ตั้งแต่ตรวจคุณภาพข้อมูลจนถึงระบุชนิดและค้นหากลุ่มยีน",
+            "en": "From read quality control to identification and gene cluster mining"
+          },
+          "keywords": "genome จีโนม FastQC fastp MultiQC Unicycler Galaxy assembly TYGS dDDH ANI BV-BRC RAST annotation antiSMASH BGC"
+        },
+        {
+          "title": {
+            "th": "การระบุชนิดด้วย ITS และ multilocus sequence analysis",
+            "en": "Identification with ITS and multilocus sequence analysis"
+          },
+          "url": "https://docs.google.com/document/d/156ifKW4PhLNDTYfqz8M5Meu3mqt2WAxiagXbyJ8tmKg/edit",
+          "desc": {
+            "th": "ITS สำหรับเชื้อรา และ MLSA หลายยีนสำหรับแบคทีเรีย",
+            "en": "ITS for fungi and multi-gene MLSA for bacteria"
+          },
+          "keywords": "ITS internal transcribed spacer เชื้อรา fungi barcode MLSA multilocus หลายยีน housekeeping gyrB rpoB atpD recA trpB concatenate"
+        },
+        {
+          "title": {
+            "th": "การแก้ไขลำดับเบสด้วย BioEdit",
+            "en": "Editing sequences in BioEdit"
+          },
+          "url": "https://docs.google.com/document/d/1XfbIzQntTVSVpLQ1r8G9MBe1poA8LYE8EqFVeNX5AqY/edit",
+          "desc": {
+            "th": "ตรวจโครมาโทแกรม แก้เบส และต่อลำดับเบสสองทิศทาง",
+            "en": "Checking chromatograms, editing bases and joining forward and reverse reads"
+          },
+          "keywords": "BioEdit ab1 chromatogram โครมาโทแกรม ลำดับเบส sequence editing trim reverse complement consensus FASTA Sanger"
+        },
+        {
+          "title": {
+            "th": "การสร้างและอ่านต้นไม้วิวัฒนาการด้วย MEGA",
+            "en": "Building and reading phylogenetic trees in MEGA"
+          },
+          "url": "https://docs.google.com/document/d/1AsVM13FUnl06yM32M_Owtra1fUmJNoxayApX4EhOJko/edit",
+          "desc": {
+            "th": "จัดเรียงลำดับเบส สร้างต้นไม้ และอ่านค่า bootstrap",
+            "en": "Aligning sequences, building trees and reading bootstrap values"
+          },
+          "keywords": "MEGA MEGA12 phylogenetic tree ต้นไม้วิวัฒนาการ phylogeny alignment MUSCLE ClustalW maximum likelihood bootstrap outgroup clade"
         }
       ]
     },
@@ -289,7 +393,12 @@
             "th": "ขั้นตอนวิทยานิพนธ์ของบัณฑิตวิทยาลัย",
             "en": "Graduate School thesis procedures"
           },
-          "url": ""
+          "url": "https://docs.google.com/document/d/1vDTSVTCl1IbY96yOdkdOiAZRHGIY25-BoDSU-ePc55w/edit",
+          "desc": {
+            "th": "เสนอโครงการผ่าน iThesis การเผยแพร่ผลงาน และการตรวจรูปแบบ",
+            "en": "Proposal via iThesis, publication requirements and format review"
+          },
+          "keywords": "วิทยานิพนธ์ thesis บัณฑิตวิทยาลัย iThesis บว.05-2 วพ.01 วพ.04 เผยแพร่ผลงาน ตีพิมพ์ สอบปากเปล่า โครงการวิทยานิพนธ์"
         },
         {
           "title": {
@@ -304,6 +413,18 @@
             "en": "Progress report template"
           },
           "url": ""
+        },
+        {
+          "title": {
+            "th": "การจดสมุดบันทึกการทดลอง",
+            "en": "Keeping a lab notebook"
+          },
+          "url": "https://docs.google.com/document/d/17GGML2sL2QIYx6WMswuYgEm3IFN8jI5JTntlmNMND2o/edit",
+          "desc": {
+            "th": "สิ่งที่ต้องบันทึก และการแก้ไขข้อมูลอย่างถูกต้อง",
+            "en": "What to record and how to correct entries properly"
+          },
+          "keywords": "lab notebook สมุดบันทึก บันทึกการทดลอง ELN data integrity ข้อมูลดิบ raw data แก้ไข"
         }
       ]
     }
