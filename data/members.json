@@ -67,100 +67,112 @@
     "photo": "img/warunee-innok.jpg"
   },
   {
-    "group": "TBD",
-    "name": {
-      "th": "ดวงกมล พึงประสพ",
-      "en": "Ms. Duangkamol Pungprasop"
-    },
-    "photo": "img/duangkamol-pungprasop.jpg"
-  },
-  {
-    "group": "TBD",
-    "name": {
-      "th": "สุวิมล เซ้งเครือ",
-      "en": "Ms. Suwimon Sengkruea"
-    },
-    "photo": "img/suwimon-sengkruea.jpg"
-  },
-  {
-    "group": "TBD",
-    "name": {
-      "th": "ธิตินันท์ ทองเรือนเหมือน",
-      "en": "Ms. Thitinan Thongrueanmuean"
-    },
-    "photo": "img/thitinan-thongrueanmuean.jpg"
-  },
-  {
-    "group": "TBD",
+    "group": "ug",
     "name": {
       "th": "นันทิยา วงษ์ประเสริฐ",
       "en": "Ms. Nanthiya Wongprasoet"
     },
-    "photo": "img/nanthiya-wongprasoet.jpg"
+    "photo": "img/nanthiya-wongprasoet.jpg",
+    "year": 4
   },
   {
-    "group": "TBD",
-    "name": {
-      "th": "ชาลิสา เย็นปู",
-      "en": "Ms. Chalisa Yenpoo"
-    },
-    "photo": "img/chalisa-yenpoo.jpg"
-  },
-  {
-    "group": "TBD",
-    "name": {
-      "th": "รัชดาภรณ์ นนพละ",
-      "en": "Ms. Ratchadaporn Nonphala"
-    },
-    "photo": "img/ratchadaporn-nonphala.jpg"
-  },
-  {
-    "group": "TBD",
+    "group": "ug",
     "name": {
       "th": "นวพรรษ ชงคโชติ",
       "en": "Ms. Nawapat Chongkachot"
     },
-    "photo": "img/nawapat-chongkachot.jpg"
+    "photo": "img/nawapat-chongkachot.jpg",
+    "year": 4
   },
   {
-    "group": "TBD",
+    "group": "ug",
     "name": {
       "th": "กมลชนก สำรุย",
       "en": "Ms. Kamonchanok Samrui"
     },
-    "photo": "img/kamonchanok-samrui.jpg"
+    "photo": "img/kamonchanok-samrui.jpg",
+    "year": 4
   },
   {
-    "group": "TBD",
-    "name": {
-      "th": "ศิริภัสสร น้ำทอง",
-      "en": "Ms. Siriphatson Namthong"
-    },
-    "photo": "img/siriphatson-namthong.jpg"
-  },
-  {
-    "group": "TBD",
+    "group": "ug",
     "name": {
       "th": "ธีรรัตน์ ชาวโพธิ์สระ",
       "en": "Ms. Thirarat Chaophosa"
     },
-    "photo": "img/thirarat-chaophosa.jpg"
+    "photo": "img/thirarat-chaophosa.jpg",
+    "year": 4
   },
   {
-    "group": "TBD",
-    "name": {
-      "th": "ทิวาพร คำลา",
-      "en": "Ms. Thiwaporn Khamla"
-    },
-    "photo": "img/thiwaporn-khamla.jpg"
-  },
-  {
-    "group": "TBD",
+    "group": "ug",
     "name": {
       "th": "อชิรญา กรุณานนท์",
       "en": "Ms. Achiraya Karunanon"
     },
-    "photo": "img/achiraya-karunanon.jpg"
+    "photo": "img/achiraya-karunanon.jpg",
+    "year": 4
+  },
+  {
+    "group": "ug",
+    "name": {
+      "th": "ดวงกมล พึงประสพ",
+      "en": "Ms. Duangkamol Pungprasop"
+    },
+    "photo": "img/duangkamol-pungprasop.jpg",
+    "year": 3
+  },
+  {
+    "group": "ug",
+    "name": {
+      "th": "สุวิมล เซ้งเครือ",
+      "en": "Ms. Suwimon Sengkruea"
+    },
+    "photo": "img/suwimon-sengkruea.jpg",
+    "year": 3
+  },
+  {
+    "group": "ug",
+    "name": {
+      "th": "ธิตินันท์ ทองเรือนเหมือน",
+      "en": "Ms. Thitinan Thongrueanmuean"
+    },
+    "photo": "img/thitinan-thongrueanmuean.jpg",
+    "year": 3
+  },
+  {
+    "group": "ug",
+    "name": {
+      "th": "ชาลิสา เย็นปู",
+      "en": "Ms. Chalisa Yenpoo"
+    },
+    "photo": "img/chalisa-yenpoo.jpg",
+    "year": 3
+  },
+  {
+    "group": "ug",
+    "name": {
+      "th": "รัชดาภรณ์ นนพละ",
+      "en": "Ms. Ratchadaporn Nonphala"
+    },
+    "photo": "img/ratchadaporn-nonphala.jpg",
+    "year": 3
+  },
+  {
+    "group": "ug",
+    "name": {
+      "th": "ศิริภัสสร น้ำทอง",
+      "en": "Ms. Siriphatson Namthong"
+    },
+    "photo": "img/siriphatson-namthong.jpg",
+    "year": 3
+  },
+  {
+    "group": "ug",
+    "name": {
+      "th": "ทิวาพร คำลา",
+      "en": "Ms. Thiwaporn Khamla"
+    },
+    "photo": "img/thiwaporn-khamla.jpg",
+    "year": 3
   },
   {
     "group": "alumni",
