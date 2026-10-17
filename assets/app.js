@@ -35,7 +35,7 @@
       "group.pi": "หัวหน้าห้องปฏิบัติการ", "group.postdoc": "นักวิจัยหลังปริญญาเอก",
       "group.phd": "นิสิตปริญญาเอก", "group.ms": "นิสิตปริญญาโท",
       "group.ug": "นิสิตปริญญาตรี", "group.staff": "เจ้าหน้าที่", "group.alumni": "ศิษย์เก่า",
-      "lvl.postdoc": "นักวิจัยหลังปริญญาเอก", "lvl.phd": "ป.เอก", "lvl.ms": "ป.โท", "lvl.ug": "ป.ตรี", "mem.all": "ดูสมาชิกทั้งหมด {n} คน", "mem.lead": "หัวหน้าห้องปฏิบัติการ นิสิตบัณฑิตศึกษา นิสิตปริญญาตรี และศิษย์เก่า", "lvl.year": "ปี {n}", "topic": "หัวข้อวิจัย:", "lvl.staff": "เจ้าหน้าที่",
+      "lvl.postdoc": "นักวิจัยหลังปริญญาเอก", "lvl.phd": "ป.เอก", "lvl.ms": "ป.โท", "lvl.ug": "ป.ตรี", "mem.all": "ดูสมาชิกทั้งหมด {n} คน", "mem.lead": "หัวหน้าห้องปฏิบัติการ นิสิตบัณฑิตศึกษา นิสิตปริญญาตรี และศิษย์เก่า", "lvl.year": "ปี {n}", "topic": "หัวข้อวิจัย:", "topic.ug": "หัวข้อปัญหาพิเศษ:", "lvl.staff": "เจ้าหน้าที่",
       "kicker": "ภาควิชาโรคพืช คณะเกษตร กำแพงแสน มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน",
       "short": "Microbiome and Biocontrol Laboratory",
       "example": "ตัวอย่าง", "empty": "ยังไม่มีรายการ", "loadError": "โหลดข้อมูลไม่สำเร็จ ตรวจรูปแบบไฟล์ในโฟลเดอร์ data/"
@@ -73,7 +73,7 @@
       "group.pi": "Principal investigator", "group.postdoc": "Postdoctoral researchers",
       "group.phd": "Ph.D. students", "group.ms": "M.Sc. students",
       "group.ug": "Undergraduate students", "group.staff": "Staff", "group.alumni": "Alumni",
-      "lvl.postdoc": "Postdoc", "lvl.phd": "Ph.D.", "lvl.ms": "M.Sc.", "lvl.ug": "B.Sc.", "mem.all": "See all {n} members", "mem.lead": "Principal investigator, graduate and undergraduate students, and alumni", "lvl.year": "Year {n}", "topic": "Research topic:", "lvl.staff": "Staff",
+      "lvl.postdoc": "Postdoc", "lvl.phd": "Ph.D.", "lvl.ms": "M.Sc.", "lvl.ug": "B.Sc.", "mem.all": "See all {n} members", "mem.lead": "Principal investigator, graduate and undergraduate students, and alumni", "lvl.year": "Year {n}", "topic": "Research topic:", "topic.ug": "Special problem:", "lvl.staff": "Staff",
       "kicker": "Department of Plant Pathology, Faculty of Agriculture at Kamphaeng Saen, Kasetsart University, Kamphaeng Saen Campus",
       "short": "Microbiome and Biocontrol Laboratory",
       "example": "Example", "empty": "Nothing here yet", "loadError": "Could not load data. Check the file format in the data/ folder"
@@ -220,7 +220,7 @@
         return '<div class="person' + (GRAD[m.group] ? "" : " ug") + '">' + avatar(m) + '<div class="name">' + esc(t(m.name)) + badge(m) + "</div>" +
           '<div class="chips"><span class="level">' + (ui["lvl." + m.group] || esc(t(m.role))) + (m.year ? " " + ui["lvl.year"].replace("{n}", esc(m.year)) : "") + "</span>" +
           (t(m.scholarship) ? '<span class="level award">' + esc(t(m.scholarship)) + "</span>" : "") + "</div>" +
-          (t(m.note) ? '<div class="note"><span class="lbl">' + ui.topic + "</span> " + rich(t(m.note)) + "</div>" : "") + "</div>";
+          (t(m.note) ? '<div class="note"><span class="lbl">' + (m.group === "ug" ? ui["topic.ug"] : ui.topic) + "</span> " + rich(t(m.note)) + "</div>" : "") + "</div>";
       }).join("") + "</div>";
     }
     if (alumni.length && full) {

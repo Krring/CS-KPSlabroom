@@ -145,7 +145,11 @@
       "en": "Ms. Chalisa Yenpoo"
     },
     "photo": "img/chalisa-yenpoo.jpg",
-    "year": 3
+    "year": 3,
+    "note": {
+      "th": "การผลิตหัวเชื้อแอคติโนแบคทีเรียปฏิปักษ์ด้วยของเหลือใช้ทางการเกษตรโดยกระบวนการหมักแบบแห้ง (solid state fermentation)",
+      "en": "Production of antagonistic actinobacterial inoculum from agricultural residues by solid-state fermentation"
+    }
   },
   {
     "group": "ug",
@@ -163,7 +167,11 @@
       "en": "Ms. Siriphatson Namthong"
     },
     "photo": "img/siriphatson-namthong.jpg",
-    "year": 3
+    "year": 3,
+    "note": {
+      "th": "การผลิตหัวเชื้อแอคติโนแบคทีเรียปฏิปักษ์ด้วยของเหลือใช้ทางการเกษตรโดยกระบวนการหมักแบบแห้ง (solid state fermentation)",
+      "en": "Production of antagonistic actinobacterial inoculum from agricultural residues by solid-state fermentation"
+    }
   },
   {
     "group": "ug",
@@ -172,7 +180,11 @@
       "en": "Ms. Thiwaporn Khamla"
     },
     "photo": "img/thiwaporn-khamla.jpg",
-    "year": 3
+    "year": 3,
+    "note": {
+      "th": "การคัดเลือกแอคติโนแบคทีเรียเอนโดไฟท์เพื่อควบคุมโรคกิ่งแห้งในทุเรียนซึ่งมีสาเหตุจากเชื้อราฟิวซาเรียม",
+      "en": "Selection of endophytic actinobacteria for the control of durian dieback caused by *Fusarium*"
+    }
   },
   {
     "group": "alumni",
