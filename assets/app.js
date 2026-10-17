@@ -35,7 +35,7 @@
       "group.pi": "หัวหน้าห้องปฏิบัติการ", "group.postdoc": "นักวิจัยหลังปริญญาเอก",
       "group.phd": "นิสิตปริญญาเอก", "group.ms": "นิสิตปริญญาโท",
       "group.ug": "นิสิตปริญญาตรี", "group.staff": "เจ้าหน้าที่", "group.alumni": "ศิษย์เก่า",
-      "lvl.postdoc": "นักวิจัยหลังปริญญาเอก", "lvl.phd": "ป.เอก", "lvl.ms": "ป.โท", "lvl.ug": "ป.ตรี", "lvl.year": "ปี {n}", "topic": "หัวข้อวิจัย:", "lvl.staff": "เจ้าหน้าที่",
+      "lvl.postdoc": "นักวิจัยหลังปริญญาเอก", "lvl.phd": "ป.เอก", "lvl.ms": "ป.โท", "lvl.ug": "ป.ตรี", "mem.all": "ดูสมาชิกทั้งหมด {n} คน", "mem.lead": "หัวหน้าห้องปฏิบัติการ นิสิตบัณฑิตศึกษา นิสิตปริญญาตรี และศิษย์เก่า", "lvl.year": "ปี {n}", "topic": "หัวข้อวิจัย:", "lvl.staff": "เจ้าหน้าที่",
       "kicker": "ภาควิชาโรคพืช คณะเกษตร กำแพงแสน มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน",
       "short": "Microbiome and Biocontrol Laboratory",
       "example": "ตัวอย่าง", "empty": "ยังไม่มีรายการ", "loadError": "โหลดข้อมูลไม่สำเร็จ ตรวจรูปแบบไฟล์ในโฟลเดอร์ data/"
@@ -73,7 +73,7 @@
       "group.pi": "Principal investigator", "group.postdoc": "Postdoctoral researchers",
       "group.phd": "Ph.D. students", "group.ms": "M.Sc. students",
       "group.ug": "Undergraduate students", "group.staff": "Staff", "group.alumni": "Alumni",
-      "lvl.postdoc": "Postdoc", "lvl.phd": "Ph.D.", "lvl.ms": "M.Sc.", "lvl.ug": "B.Sc.", "lvl.year": "Year {n}", "topic": "Research topic:", "lvl.staff": "Staff",
+      "lvl.postdoc": "Postdoc", "lvl.phd": "Ph.D.", "lvl.ms": "M.Sc.", "lvl.ug": "B.Sc.", "mem.all": "See all {n} members", "mem.lead": "Principal investigator, graduate and undergraduate students, and alumni", "lvl.year": "Year {n}", "topic": "Research topic:", "lvl.staff": "Staff",
       "kicker": "Department of Plant Pathology, Faculty of Agriculture at Kamphaeng Saen, Kasetsart University, Kamphaeng Saen Campus",
       "short": "Microbiome and Biocontrol Laboratory",
       "example": "Example", "empty": "Nothing here yet", "loadError": "Could not load data. Check the file format in the data/ folder"
@@ -160,37 +160,13 @@
     if ($("#pub-full")) { renderFull(); return; }
     if ($("#contact-page")) { renderContact(); return; }
     if ($("#kb-page")) { renderKb(); return; }
+    if ($("#members-page")) { renderMembers(true); return; }
     $("#research-list").innerHTML = data.research.map(function (r, i) {
       return '<article class="tile"><svg class="glyph" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
         GLYPHS[i % GLYPHS.length] + "</svg><h3>" + esc(t(r.title)) + "</h3><p>" + rich(t(r.body)) + "</p></article>";
     }).join("");
 
-    var M = data.members;
-    var pis = M.filter(function (m) { return m.group === "pi"; });
-    var current = GROUP_ORDER.filter(function (g) { return g !== "pi" && g !== "alumni"; }).reduce(function (acc, g) {
-      return acc.concat(M.filter(function (m) { return m.group === g; }));
-    }, []);
-    var alumni = M.filter(function (m) { return m.group === "alumni"; });
-    var html = pis.map(function (m) {
-      return '<div class="pi-card">' + avatar(m) + '<div><div class="eyebrow">' + ui["group.pi"] + '</div><div class="name">' +
-        esc(t(m.name)) + badge(m) + '</div><div class="role">' + esc(t(m.role)) + "</div>" +
-        (m.note ? '<div class="note">' + rich(t(m.note)) + "</div>" : "") +
-        (m.email ? '<div class="note">' + esc(m.email) + "</div>" : "") + metrics(m) + "</div></div>";
-    }).join("");
-    if (current.length) {
-      html += '<div class="people">' + current.map(function (m) {
-        return '<div class="person">' + avatar(m) + '<div class="name">' + esc(t(m.name)) + badge(m) + "</div>" +
-          '<div class="chips"><span class="level">' + (ui["lvl." + m.group] || esc(t(m.role))) + (m.year ? " " + ui["lvl.year"].replace("{n}", esc(m.year)) : "") + "</span>" +
-          (t(m.scholarship) ? '<span class="level award">' + esc(t(m.scholarship)) + "</span>" : "") + "</div>" +
-          (t(m.note) ? '<div class="note"><span class="lbl">' + ui.topic + "</span> " + rich(t(m.note)) + "</div>" : "") + "</div>";
-      }).join("") + "</div>";
-    }
-    if (alumni.length) {
-      html += '<div class="alumni"><h3>' + ui["group.alumni"] + "</h3><ul>" + alumni.map(function (m) {
-        return "<li><span>" + esc(t(m.name)) + badge(m) + (t(m.role) ? ' <span class="muted">' + esc(t(m.role)) + "</span>" : "") + "</span><span>" + rich(t(m.note)) + "</span></li>";
-      }).join("") + "</ul></div>";
-    }
-    $("#member-list").innerHTML = html;
+    renderMembers(false);
 
     var pubs = sortedPubs();
     var LIMIT = 10;
@@ -215,6 +191,63 @@
         esc(t(n.title)) + badge(n) + "</div><p>" + esc(t(n.body)) + "</p></article>";
     }).join("") : "<p>" + ui.empty + "</p>";
   }
+
+  var GRAD = { postdoc: 1, phd: 1, ms: 1, staff: 1 };
+  var ugOrder = null;
+  function shuffled(list) {
+    if (!ugOrder) {
+      ugOrder = list.map(function (_, i) { return i; });
+      for (var i = ugOrder.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var tmp = ugOrder[i]; ugOrder[i] = ugOrder[j]; ugOrder[j] = tmp; }
+    }
+    return ugOrder.map(function (i) { return list[i]; }).filter(Boolean);
+  }
+  function renderMembers(full) {
+    var ui = UI[lang], M = data.members;
+    var pis = M.filter(function (m) { return m.group === "pi"; });
+    var current = GROUP_ORDER.filter(function (g) { return g !== "pi" && g !== "alumni"; }).reduce(function (acc, g) {
+      var list = M.filter(function (m) { return m.group === g; });
+      return acc.concat(g === "ug" && !full ? shuffled(list) : list);
+    }, []);
+    var alumni = M.filter(function (m) { return m.group === "alumni"; });
+    var html = pis.map(function (m) {
+      return '<div class="pi-card">' + avatar(m) + '<div><div class="eyebrow">' + ui["group.pi"] + '</div><div class="name">' +
+        esc(t(m.name)) + badge(m) + '</div><div class="role">' + esc(t(m.role)) + "</div>" +
+        (m.note ? '<div class="note">' + rich(t(m.note)) + "</div>" : "") +
+        (m.email ? '<div class="note">' + esc(m.email) + "</div>" : "") + metrics(m) + "</div></div>";
+    }).join("");
+    if (current.length) {
+      html += '<div class="people">' + current.map(function (m) {
+        return '<div class="person' + (GRAD[m.group] ? "" : " ug") + '">' + avatar(m) + '<div class="name">' + esc(t(m.name)) + badge(m) + "</div>" +
+          '<div class="chips"><span class="level">' + (ui["lvl." + m.group] || esc(t(m.role))) + (m.year ? " " + ui["lvl.year"].replace("{n}", esc(m.year)) : "") + "</span>" +
+          (t(m.scholarship) ? '<span class="level award">' + esc(t(m.scholarship)) + "</span>" : "") + "</div>" +
+          (t(m.note) ? '<div class="note"><span class="lbl">' + ui.topic + "</span> " + rich(t(m.note)) + "</div>" : "") + "</div>";
+      }).join("") + "</div>";
+    }
+    if (alumni.length && full) {
+      html += '<div class="alumni"><h3>' + ui["group.alumni"] + "</h3><ul>" + alumni.map(function (m) {
+        return "<li><span>" + esc(t(m.name)) + badge(m) + (t(m.role) ? ' <span class="muted">' + esc(t(m.role)) + "</span>" : "") + "</span><span>" + rich(t(m.note)) + "</span></li>";
+      }).join("") + "</ul></div>";
+    }
+    $("#member-list").innerHTML = html;
+    var more = $("#member-more");
+    if (more) more.textContent = ui["mem.all"].replace("{n}", M.length);
+    if (!full) fitMembers();
+  }
+  var MOBILE = window.matchMedia ? window.matchMedia("(max-width: 560px)") : null;
+  function fitMembers() {
+    var grid = $("#member-list .people");
+    if (!grid) return;
+    var people = Array.prototype.slice.call(grid.children);
+    people.forEach(function (p) { p.hidden = false; });
+    if (MOBILE && MOBILE.matches) {
+      people.forEach(function (p) { if (p.classList.contains("ug")) p.hidden = true; });
+      return;
+    }
+    var cols = getComputedStyle(grid).gridTemplateColumns.split(" ").filter(Boolean).length || 1;
+    people.forEach(function (p, i) { if (i >= cols * 3) p.hidden = true; });
+  }
+  var fitTimer;
+  window.addEventListener("resize", function () { clearTimeout(fitTimer); fitTimer = setTimeout(fitMembers, 120); });
 
   function renderContact() {
     var ui = UI[lang], s = data.site;

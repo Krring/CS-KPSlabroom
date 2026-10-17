@@ -308,3 +308,4 @@ main.sub { max-width: 76rem; margin-inline: auto; }
 .kb-grid.single { grid-template-columns: minmax(0, 1fr); }
 .kb-cat-full ul { grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); column-gap: 2rem; }
 .kb-empty .pill { margin-top: 0.75rem; }
+.person[hidden] { display: none; }
