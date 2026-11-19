@@ -31,6 +31,10 @@
       {
         "label": "ORCID",
         "url": "https://orcid.org/0000-0002-4092-6575"
+      },
+      {
+        "label": "e-Card",
+        "url": "card/"
       }
     ]
   },
